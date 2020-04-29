@@ -1,0 +1,10 @@
+D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.csprojAssemblyReference.cache
+D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.startForm.resources
+D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.Properties.Resources.resources
+D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.csproj.GenerateResource.cache
+D:\Univer\4sem\practice\ComputerShop\ComputerShop\bin\Debug\ComputerShop.exe.config
+D:\Univer\4sem\practice\ComputerShop\ComputerShop\bin\Debug\ComputerShop.exe
+D:\Univer\4sem\practice\ComputerShop\ComputerShop\bin\Debug\ComputerShop.pdb
+D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.exe
+D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.pdb
+D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.LoginForm.resources
