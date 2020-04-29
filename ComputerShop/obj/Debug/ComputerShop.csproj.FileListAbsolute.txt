@@ -1,4 +1,3 @@
-D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.csprojAssemblyReference.cache
 D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.startForm.resources
 D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.Properties.Resources.resources
 D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.csproj.GenerateResource.cache
@@ -8,3 +7,14 @@ D:\Univer\4sem\practice\ComputerShop\ComputerShop\bin\Debug\ComputerShop.pdb
 D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.exe
 D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.pdb
 D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.LoginForm.resources
+D:\Univer\4sem\practice\ComputerShop\ComputerShop\bin\Debug\EntityFramework.dll
+D:\Univer\4sem\practice\ComputerShop\ComputerShop\bin\Debug\EntityFramework.SqlServer.dll
+D:\Univer\4sem\practice\ComputerShop\ComputerShop\bin\Debug\EntityFramework.xml
+D:\Univer\4sem\practice\ComputerShop\ComputerShop\bin\Debug\EntityFramework.SqlServer.xml
+D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.csproj.CopyComplete
+D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.AdminForm1.resources
+D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.Migrations.InitialCreate.resources
+D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.Migrations.newColumn.resources
+D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.GuestForm1.resources
+D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.UserForm1.resources
+D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.RegistrationForm.resources

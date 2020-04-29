@@ -58,6 +58,7 @@
             this.bSignUp.TabIndex = 1;
             this.bSignUp.Text = "Регистрация";
             this.bSignUp.UseVisualStyleBackColor = true;
+            this.bSignUp.Click += new System.EventHandler(this.bSignUp_Click);
             // 
             // shopName
             // 
@@ -95,7 +96,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "StartForm";
-            this.Text = "\"Название\"";
+            this.Text = "\"Название\". Приветствие";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.StartForm_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
