@@ -29,32 +29,31 @@ namespace ComputerShop
                 string login = LoginTextBox.Text;
                 string password = PasswordTextBox.Text;
 
-                User authorising = new User();
-                bool loginStatus = false;
+                // Authorization procession. Is "login" registered?
+                User authorising = db.Users.SingleOrDefault(u => u.Login == login);
 
-                foreach(var u in db.Users)
+                // Error processing. Wrong password
+                if (authorising == null || !PasswordHasher.Verify(password, authorising.PassWord))
                 {
-                    if (login == u.Login && password == u.PassWord)
-                    {
-                        loginStatus = true;
-                        authorising = u;
-                    }
+                    // TODO:
+                    // Add error (wrong password or username)
+                    return;
                 }
 
-                if(loginStatus == false)
+                // Authorization processing
+                if (authorising.Status == "admin")
                 {
-                    // Add error message
-                }
+                    CurrentUser.Set(authorising);
 
-                if(authorising.Status == "admin" && loginStatus == true)
-                {
                     AdminForm1 form = new AdminForm1();
                     form.Show();
                     Hide();
                 }
 
-                if (authorising.Status == "user" && loginStatus == true)
+                if (authorising.Status == "user")
                 {
+                    CurrentUser.Set(authorising);
+
                     UserForm1 form = new UserForm1();
                     form.Show();
                     Hide();
