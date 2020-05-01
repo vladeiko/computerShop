@@ -45,7 +45,7 @@ namespace ComputerShop
                 {
                     CurrentUser.Set(authorising);
 
-                    AdminForm1 form = new AdminForm1();
+                    AdminStartForm form = new AdminStartForm();
                     form.Show();
                     Hide();
                 }
@@ -64,6 +64,13 @@ namespace ComputerShop
         private void GuestButton_Click(object sender, EventArgs e)
         {
             GuestForm1 form = new GuestForm1();
+            form.Show();
+            Hide();
+        }
+
+        private void goBackButton_Click(object sender, EventArgs e)
+        {
+            StartForm form = new StartForm();
             form.Show();
             Hide();
         }

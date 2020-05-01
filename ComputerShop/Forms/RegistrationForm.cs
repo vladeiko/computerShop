@@ -117,5 +117,12 @@ namespace ComputerShop
                 }
             }
         }
+
+        private void goBackButton_Click(object sender, EventArgs e)
+        {
+            StartForm form = new StartForm();
+            form.Show();
+            Hide();
+        }
     }
 }

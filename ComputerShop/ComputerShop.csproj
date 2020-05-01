@@ -56,13 +56,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\AdminForms\AdminForm1.cs">
+    <Compile Include="Forms\AdminForms\AdminShowUsersForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AdminForms\AdminForm1.Designer.cs">
-      <DependentUpon>AdminForm1.cs</DependentUpon>
+    <Compile Include="Forms\AdminForms\AdminShowUsersForm.Designer.cs">
+      <DependentUpon>AdminShowUsersForm.cs</DependentUpon>
     </Compile>
     <Compile Include="CurrentUser.cs" />
+    <Compile Include="Forms\AdminForms\AdminStartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\AdminStartForm.Designer.cs">
+      <DependentUpon>AdminStartForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\GuestForms\GuestForm1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,8 +117,11 @@
       <DependentUpon>UserForm1.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\PasswordHasher.cs" />
-    <EmbeddedResource Include="Forms\AdminForms\AdminForm1.resx">
-      <DependentUpon>AdminForm1.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\AdminForms\AdminShowUsersForm.resx">
+      <DependentUpon>AdminShowUsersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\AdminStartForm.resx">
+      <DependentUpon>AdminStartForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\GuestForms\GuestForm1.resx">
       <DependentUpon>GuestForm1.cs</DependentUpon>

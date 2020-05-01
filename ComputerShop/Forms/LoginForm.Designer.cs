@@ -35,6 +35,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.GuestButton = new System.Windows.Forms.Button();
+            this.goBackButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LoginButton
@@ -94,11 +95,23 @@
             this.GuestButton.UseVisualStyleBackColor = true;
             this.GuestButton.Click += new System.EventHandler(this.GuestButton_Click);
             // 
+            // goBackButton
+            // 
+            this.goBackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.goBackButton.Location = new System.Drawing.Point(364, 394);
+            this.goBackButton.Name = "goBackButton";
+            this.goBackButton.Size = new System.Drawing.Size(65, 23);
+            this.goBackButton.TabIndex = 7;
+            this.goBackButton.Text = "НАЗАД";
+            this.goBackButton.UseVisualStyleBackColor = true;
+            this.goBackButton.Click += new System.EventHandler(this.goBackButton_Click);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.goBackButton);
             this.Controls.Add(this.GuestButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -121,5 +134,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button GuestButton;
+        private System.Windows.Forms.Button goBackButton;
     }
 }

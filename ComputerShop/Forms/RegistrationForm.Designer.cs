@@ -43,6 +43,7 @@
             this.EmailTextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.PhoneTextBox = new System.Windows.Forms.TextBox();
+            this.goBackButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LoginTextBox
@@ -171,11 +172,23 @@
             this.PhoneTextBox.Size = new System.Drawing.Size(226, 20);
             this.PhoneTextBox.TabIndex = 12;
             // 
+            // goBackButton
+            // 
+            this.goBackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.goBackButton.Location = new System.Drawing.Point(368, 402);
+            this.goBackButton.Name = "goBackButton";
+            this.goBackButton.Size = new System.Drawing.Size(75, 23);
+            this.goBackButton.TabIndex = 14;
+            this.goBackButton.Text = "НАЗАД";
+            this.goBackButton.UseVisualStyleBackColor = true;
+            this.goBackButton.Click += new System.EventHandler(this.goBackButton_Click);
+            // 
             // RegistrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.goBackButton);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.PhoneTextBox);
             this.Controls.Add(this.label5);
@@ -215,5 +228,6 @@
         private System.Windows.Forms.TextBox EmailTextBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox PhoneTextBox;
+        private System.Windows.Forms.Button goBackButton;
     }
 }
