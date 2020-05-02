@@ -24,16 +24,19 @@ namespace ComputerShop
                 foreach(var u in db.Users)
                 {
                     data.Add(new string[] { 
+                        u.Id.ToString(),
+                        u.Login,
                         u.FirstName, 
                         u.SecondName, 
                         u.Email, 
-                        u.Phone 
+                        u.Phone,
+                        u.Status
                     });
                 }
             }
             
             foreach(string[] str in data)            
-                dataGridView1.Rows.Add(str);
+                usersDataGrid.Rows.Add(str);
 
         }
 
@@ -47,6 +50,24 @@ namespace ComputerShop
             AdminStartForm form = new AdminStartForm();
             form.Show();
             Hide();
+        }
+
+        private void showMoreButton_Click(object sender, EventArgs e)
+        {
+            int id;
+
+            try
+            {
+                id = Convert.ToInt32(usersDataGrid.CurrentRow.Cells[0].Value.ToString());
+                AdminMoreUserInfoForm form = new AdminMoreUserInfoForm(id);
+                form.ShowDialog();
+            }
+            catch
+            {
+                // TODO:
+                // Add error (select string)
+                return;
+            }
         }
     }
 }

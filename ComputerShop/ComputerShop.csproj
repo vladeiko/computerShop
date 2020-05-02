@@ -56,6 +56,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\AdminForms\AdminMoreUserInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\AdminMoreUserInfoForm.Designer.cs">
+      <DependentUpon>AdminMoreUserInfoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AdminForms\AdminShowUsersForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,9 @@
       <DependentUpon>UserForm1.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\PasswordHasher.cs" />
+    <EmbeddedResource Include="Forms\AdminForms\AdminMoreUserInfoForm.resx">
+      <DependentUpon>AdminMoreUserInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminForms\AdminShowUsersForm.resx">
       <DependentUpon>AdminShowUsersForm.cs</DependentUpon>
     </EmbeddedResource>

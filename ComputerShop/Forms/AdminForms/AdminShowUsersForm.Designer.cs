@@ -30,13 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminShowUsersForm));
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.usersDataGrid = new System.Windows.Forms.DataGridView();
+            this.goBackButton = new System.Windows.Forms.Button();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Login = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SecondName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.goBackButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.showMoreButton = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.usersDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -48,18 +52,44 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "ADMIN FORM 1";
             // 
-            // dataGridView1
+            // usersDataGrid
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.usersDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.usersDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.Login,
             this.FirstName,
             this.SecondName,
             this.Email,
-            this.Phone});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(723, 270);
-            this.dataGridView1.TabIndex = 1;
+            this.Phone,
+            this.Status});
+            this.usersDataGrid.Location = new System.Drawing.Point(12, 12);
+            this.usersDataGrid.Name = "usersDataGrid";
+            this.usersDataGrid.Size = new System.Drawing.Size(723, 306);
+            this.usersDataGrid.TabIndex = 1;
+            // 
+            // goBackButton
+            // 
+            this.goBackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.goBackButton.Location = new System.Drawing.Point(12, 415);
+            this.goBackButton.Name = "goBackButton";
+            this.goBackButton.Size = new System.Drawing.Size(75, 23);
+            this.goBackButton.TabIndex = 2;
+            this.goBackButton.Text = "НАЗАД";
+            this.goBackButton.UseVisualStyleBackColor = true;
+            this.goBackButton.Click += new System.EventHandler(this.goBackButton_Click);
+            // 
+            // id
+            // 
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
+            this.id.Visible = false;
+            // 
+            // Login
+            // 
+            this.Login.HeaderText = "Логин";
+            this.Login.Name = "Login";
+            this.Login.ReadOnly = true;
             // 
             // FirstName
             // 
@@ -93,30 +123,37 @@
             this.Phone.ReadOnly = true;
             this.Phone.Width = 170;
             // 
-            // goBackButton
+            // Status
             // 
-            this.goBackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.goBackButton.Location = new System.Drawing.Point(12, 415);
-            this.goBackButton.Name = "goBackButton";
-            this.goBackButton.Size = new System.Drawing.Size(75, 23);
-            this.goBackButton.TabIndex = 2;
-            this.goBackButton.Text = "НАЗАД";
-            this.goBackButton.UseVisualStyleBackColor = true;
-            this.goBackButton.Click += new System.EventHandler(this.goBackButton_Click);
+            this.Status.HeaderText = "Роль";
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
+            // 
+            // showMoreButton
+            // 
+            this.showMoreButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.showMoreButton.Location = new System.Drawing.Point(13, 325);
+            this.showMoreButton.Name = "showMoreButton";
+            this.showMoreButton.Size = new System.Drawing.Size(92, 29);
+            this.showMoreButton.TabIndex = 3;
+            this.showMoreButton.Text = "Подробнее";
+            this.showMoreButton.UseVisualStyleBackColor = true;
+            this.showMoreButton.Click += new System.EventHandler(this.showMoreButton_Click);
             // 
             // AdminShowUsersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(854, 450);
+            this.Controls.Add(this.showMoreButton);
             this.Controls.Add(this.goBackButton);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.usersDataGrid);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AdminShowUsersForm";
             this.Text = "\"Название\". Администратор. Просмотр пользователей";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdminShowUsersForm_FormClosed);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersDataGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -125,11 +162,15 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView usersDataGrid;
+        private System.Windows.Forms.Button goBackButton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Login;
         private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
         private System.Windows.Forms.DataGridViewTextBoxColumn SecondName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn Phone;
-        private System.Windows.Forms.Button goBackButton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private System.Windows.Forms.Button showMoreButton;
     }
 }

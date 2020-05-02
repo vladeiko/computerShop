@@ -20,3 +20,5 @@ D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.Registr
 D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.Migrations.emailAndPhoneStrings.resources
 D:\Univer\4sem\practice\computerShop\ComputerShop\obj\Debug\ComputerShop.AdminStartForm.resources
 D:\Univer\4sem\practice\computerShop\ComputerShop\obj\Debug\ComputerShop.AdminShowUsersForm.resources
+D:\Univer\4sem\practice\computerShop\ComputerShop\obj\Debug\ComputerShop.csprojAssemblyReference.cache
+D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.AdminMoreUserInfoForm.resources
