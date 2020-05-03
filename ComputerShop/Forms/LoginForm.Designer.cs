@@ -41,7 +41,7 @@
             // LoginButton
             // 
             this.LoginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LoginButton.Location = new System.Drawing.Point(364, 265);
+            this.LoginButton.Location = new System.Drawing.Point(207, 168);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(65, 30);
             this.LoginButton.TabIndex = 1;
@@ -51,7 +51,7 @@
             // 
             // PasswordTextBox
             // 
-            this.PasswordTextBox.Location = new System.Drawing.Point(347, 227);
+            this.PasswordTextBox.Location = new System.Drawing.Point(161, 132);
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.PasswordChar = '*';
             this.PasswordTextBox.Size = new System.Drawing.Size(156, 20);
@@ -59,7 +59,7 @@
             // 
             // LoginTextBox
             // 
-            this.LoginTextBox.Location = new System.Drawing.Point(347, 158);
+            this.LoginTextBox.Location = new System.Drawing.Point(161, 96);
             this.LoginTextBox.Name = "LoginTextBox";
             this.LoginTextBox.Size = new System.Drawing.Size(156, 20);
             this.LoginTextBox.TabIndex = 3;
@@ -68,7 +68,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(294, 158);
+            this.label1.Location = new System.Drawing.Point(108, 96);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 16);
             this.label1.TabIndex = 4;
@@ -78,7 +78,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(284, 231);
+            this.label2.Location = new System.Drawing.Point(98, 136);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 16);
             this.label2.TabIndex = 5;
@@ -87,7 +87,7 @@
             // GuestButton
             // 
             this.GuestButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.GuestButton.Location = new System.Drawing.Point(364, 314);
+            this.GuestButton.Location = new System.Drawing.Point(207, 215);
             this.GuestButton.Name = "GuestButton";
             this.GuestButton.Size = new System.Drawing.Size(65, 30);
             this.GuestButton.TabIndex = 6;
@@ -98,7 +98,7 @@
             // goBackButton
             // 
             this.goBackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.goBackButton.Location = new System.Drawing.Point(364, 394);
+            this.goBackButton.Location = new System.Drawing.Point(207, 288);
             this.goBackButton.Name = "goBackButton";
             this.goBackButton.Size = new System.Drawing.Size(65, 23);
             this.goBackButton.TabIndex = 7;
@@ -110,7 +110,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(459, 388);
             this.Controls.Add(this.goBackButton);
             this.Controls.Add(this.GuestButton);
             this.Controls.Add(this.label2);

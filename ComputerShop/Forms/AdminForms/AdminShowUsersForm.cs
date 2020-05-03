@@ -69,5 +69,30 @@ namespace ComputerShop
                 return;
             }
         }
+
+        private void reloadButton_Click(object sender, EventArgs e)
+        {
+            data.Clear();
+            usersDataGrid.Rows.Clear();
+
+            using (var db = new MyDbContext())
+            {
+                foreach (var u in db.Users)
+                {
+                    data.Add(new string[] {
+                        u.Id.ToString(),
+                        u.Login,
+                        u.FirstName,
+                        u.SecondName,
+                        u.Email,
+                        u.Phone,
+                        u.Status
+                    });
+                }
+            }
+
+            foreach (string[] str in data)
+                usersDataGrid.Rows.Add(str);
+        }
     }
 }

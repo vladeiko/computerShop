@@ -32,6 +32,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.usersDataGrid = new System.Windows.Forms.DataGridView();
             this.goBackButton = new System.Windows.Forms.Button();
+            this.showMoreButton = new System.Windows.Forms.Button();
+            this.reloadButton = new System.Windows.Forms.Button();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Login = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,14 +41,14 @@
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.showMoreButton = new System.Windows.Forms.Button();
+            this.addNewUserButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.usersDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(757, 9);
+            this.label1.Location = new System.Drawing.Point(801, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 13);
             this.label1.TabIndex = 0;
@@ -65,7 +67,7 @@
             this.Status});
             this.usersDataGrid.Location = new System.Drawing.Point(12, 12);
             this.usersDataGrid.Name = "usersDataGrid";
-            this.usersDataGrid.Size = new System.Drawing.Size(723, 306);
+            this.usersDataGrid.Size = new System.Drawing.Size(783, 306);
             this.usersDataGrid.TabIndex = 1;
             // 
             // goBackButton
@@ -78,6 +80,28 @@
             this.goBackButton.Text = "НАЗАД";
             this.goBackButton.UseVisualStyleBackColor = true;
             this.goBackButton.Click += new System.EventHandler(this.goBackButton_Click);
+            // 
+            // showMoreButton
+            // 
+            this.showMoreButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.showMoreButton.Location = new System.Drawing.Point(13, 325);
+            this.showMoreButton.Name = "showMoreButton";
+            this.showMoreButton.Size = new System.Drawing.Size(92, 29);
+            this.showMoreButton.TabIndex = 3;
+            this.showMoreButton.Text = "Подробнее";
+            this.showMoreButton.UseVisualStyleBackColor = true;
+            this.showMoreButton.Click += new System.EventHandler(this.showMoreButton_Click);
+            // 
+            // reloadButton
+            // 
+            this.reloadButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.reloadButton.Location = new System.Drawing.Point(214, 325);
+            this.reloadButton.Name = "reloadButton";
+            this.reloadButton.Size = new System.Drawing.Size(92, 29);
+            this.reloadButton.TabIndex = 4;
+            this.reloadButton.Text = "Обновить";
+            this.reloadButton.UseVisualStyleBackColor = true;
+            this.reloadButton.Click += new System.EventHandler(this.reloadButton_Click);
             // 
             // id
             // 
@@ -93,19 +117,19 @@
             // 
             // FirstName
             // 
-            this.FirstName.FillWeight = 170F;
+            this.FirstName.FillWeight = 140F;
             this.FirstName.HeaderText = "Имя";
             this.FirstName.Name = "FirstName";
             this.FirstName.ReadOnly = true;
-            this.FirstName.Width = 170;
+            this.FirstName.Width = 140;
             // 
             // SecondName
             // 
-            this.SecondName.FillWeight = 170F;
+            this.SecondName.FillWeight = 140F;
             this.SecondName.HeaderText = "Фамилия";
             this.SecondName.Name = "SecondName";
             this.SecondName.ReadOnly = true;
-            this.SecondName.Width = 170;
+            this.SecondName.Width = 140;
             // 
             // Email
             // 
@@ -117,34 +141,37 @@
             // 
             // Phone
             // 
-            this.Phone.FillWeight = 170F;
+            this.Phone.FillWeight = 140F;
             this.Phone.HeaderText = "Телефон";
             this.Phone.Name = "Phone";
             this.Phone.ReadOnly = true;
-            this.Phone.Width = 170;
+            this.Phone.Width = 140;
             // 
             // Status
             // 
+            this.Status.FillWeight = 50F;
             this.Status.HeaderText = "Роль";
             this.Status.Name = "Status";
             this.Status.ReadOnly = true;
+            this.Status.Width = 50;
             // 
-            // showMoreButton
+            // addNewUserButton
             // 
-            this.showMoreButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.showMoreButton.Location = new System.Drawing.Point(13, 325);
-            this.showMoreButton.Name = "showMoreButton";
-            this.showMoreButton.Size = new System.Drawing.Size(92, 29);
-            this.showMoreButton.TabIndex = 3;
-            this.showMoreButton.Text = "Подробнее";
-            this.showMoreButton.UseVisualStyleBackColor = true;
-            this.showMoreButton.Click += new System.EventHandler(this.showMoreButton_Click);
+            this.addNewUserButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addNewUserButton.Location = new System.Drawing.Point(113, 325);
+            this.addNewUserButton.Name = "addNewUserButton";
+            this.addNewUserButton.Size = new System.Drawing.Size(92, 29);
+            this.addNewUserButton.TabIndex = 5;
+            this.addNewUserButton.Text = "Добавить";
+            this.addNewUserButton.UseVisualStyleBackColor = true;
             // 
             // AdminShowUsersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(854, 450);
+            this.ClientSize = new System.Drawing.Size(893, 450);
+            this.Controls.Add(this.addNewUserButton);
+            this.Controls.Add(this.reloadButton);
             this.Controls.Add(this.showMoreButton);
             this.Controls.Add(this.goBackButton);
             this.Controls.Add(this.usersDataGrid);
@@ -164,6 +191,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView usersDataGrid;
         private System.Windows.Forms.Button goBackButton;
+        private System.Windows.Forms.Button showMoreButton;
+        private System.Windows.Forms.Button reloadButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Login;
         private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
@@ -171,6 +200,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn Phone;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
-        private System.Windows.Forms.Button showMoreButton;
+        private System.Windows.Forms.Button addNewUserButton;
     }
 }
