@@ -38,6 +38,7 @@ namespace ComputerShop
             foreach(string[] str in data)            
                 usersDataGrid.Rows.Add(str);
 
+            return;
         }
 
         private void AdminShowUsersForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -68,6 +69,8 @@ namespace ComputerShop
                 // Add error (select string)
                 return;
             }
+
+            return;
         }
 
         private void reloadButton_Click(object sender, EventArgs e)
@@ -93,6 +96,34 @@ namespace ComputerShop
 
             foreach (string[] str in data)
                 usersDataGrid.Rows.Add(str);
+
+            return;
+        }
+
+        private void addNewUserButton_Click(object sender, EventArgs e)
+        {
+            AdminAddUserForm form = new AdminAddUserForm();
+            form.ShowDialog();
+        }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            int id;
+
+            try
+            {
+                id = Convert.ToInt32(usersDataGrid.CurrentRow.Cells[0].Value.ToString());
+                AdminAcceptDeletingUser form = new AdminAcceptDeletingUser(id);
+                form.ShowDialog();
+            }
+            catch
+            {
+                // TODO:
+                // Add error (select string)
+                return;
+            }
+
+            //return;
         }
     }
 }

@@ -22,3 +22,6 @@ D:\Univer\4sem\practice\computerShop\ComputerShop\obj\Debug\ComputerShop.AdminSt
 D:\Univer\4sem\practice\computerShop\ComputerShop\obj\Debug\ComputerShop.AdminShowUsersForm.resources
 D:\Univer\4sem\practice\computerShop\ComputerShop\obj\Debug\ComputerShop.csprojAssemblyReference.cache
 D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.AdminMoreUserInfoForm.resources
+D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.AdminAddUserForm.resources
+D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.AdminAcceptDeletingUser.resources
+D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.Migrations.fixBugs.resources

@@ -59,6 +59,8 @@ namespace ComputerShop
                     Hide();
                 }
             }
+
+            return;
         }
 
         private void GuestButton_Click(object sender, EventArgs e)

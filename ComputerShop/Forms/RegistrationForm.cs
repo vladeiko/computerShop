@@ -33,9 +33,13 @@ namespace ComputerShop
                 string passWord = PassWordTextBox.Text;
                 string email = EmailTextBox.Text;
                 string phone = PhoneTextBox.Text;
+                string imgPath = avatarPictureBox.ImageLocation;
+
+                if (avatarPictureBox.ImageLocation == "")
+                    imgPath = "D:\\Univer\\4sem\\practice\\computerShop\\ComputerShop\\img\\noAvatar.png"; 
 
                 // Error processing. Incorrectly entered data
-                    if (login == "")
+                if (login == "")
                     {
                         // TODO:
                         // Add empty login
@@ -105,7 +109,8 @@ namespace ComputerShop
                         PassWord = PasswordHasher.Hash(passWord),
                         Email = email,
                         Phone = phone,
-                        Status = "user"
+                        Status = "user",
+                        ImagePath = imgPath
                     };
 
                     db.Users.Add(newUser);
@@ -116,6 +121,8 @@ namespace ComputerShop
                     Hide();
                 }
             }
+
+            return;
         }
 
         private void goBackButton_Click(object sender, EventArgs e)
@@ -123,6 +130,13 @@ namespace ComputerShop
             StartForm form = new StartForm();
             form.Show();
             Hide();
+        }
+
+        private void addPictureButton_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+
+            avatarPictureBox.ImageLocation = openFileDialog1.FileName;
         }
     }
 }

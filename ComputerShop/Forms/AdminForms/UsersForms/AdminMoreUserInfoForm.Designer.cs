@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminMoreUserInfoForm));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.avatarPictureBox = new System.Windows.Forms.PictureBox();
             this.loginTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.firstNameTextBox = new System.Windows.Forms.TextBox();
@@ -43,16 +43,22 @@
             this.editButton = new System.Windows.Forms.Button();
             this.acceptButton = new System.Windows.Forms.Button();
             this.declineButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.label7 = new System.Windows.Forms.Label();
+            this.statusComboBox = new System.Windows.Forms.ComboBox();
+            this.addPictureButton = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            ((System.ComponentModel.ISupportInitialize)(this.avatarPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // avatarPictureBox
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(300, 300);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.avatarPictureBox.Location = new System.Drawing.Point(12, 12);
+            this.avatarPictureBox.Name = "avatarPictureBox";
+            this.avatarPictureBox.Size = new System.Drawing.Size(300, 300);
+            this.avatarPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.avatarPictureBox.TabIndex = 0;
+            this.avatarPictureBox.TabStop = false;
             // 
             // loginTextBox
             // 
@@ -172,11 +178,53 @@
             this.declineButton.Visible = false;
             this.declineButton.Click += new System.EventHandler(this.declineButton_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.Location = new System.Drawing.Point(165, 329);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(54, 16);
+            this.label7.TabIndex = 31;
+            this.label7.Text = "Статус";
+            // 
+            // statusComboBox
+            // 
+            this.statusComboBox.Enabled = false;
+            this.statusComboBox.FormattingEnabled = true;
+            this.statusComboBox.Items.AddRange(new object[] {
+            "user",
+            "admin"});
+            this.statusComboBox.Location = new System.Drawing.Point(223, 326);
+            this.statusComboBox.Name = "statusComboBox";
+            this.statusComboBox.Size = new System.Drawing.Size(89, 21);
+            this.statusComboBox.TabIndex = 30;
+            // 
+            // addPictureButton
+            // 
+            this.addPictureButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addPictureButton.Location = new System.Drawing.Point(26, 324);
+            this.addPictureButton.Margin = new System.Windows.Forms.Padding(2);
+            this.addPictureButton.Name = "addPictureButton";
+            this.addPictureButton.Size = new System.Drawing.Size(104, 49);
+            this.addPictureButton.TabIndex = 32;
+            this.addPictureButton.Text = "Выбрать\r\nизображение";
+            this.addPictureButton.UseVisualStyleBackColor = true;
+            this.addPictureButton.Visible = false;
+            this.addPictureButton.Click += new System.EventHandler(this.addPictureButton_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // AdminMoreUserInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(624, 403);
+            this.ClientSize = new System.Drawing.Size(624, 401);
+            this.Controls.Add(this.addPictureButton);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.statusComboBox);
             this.Controls.Add(this.declineButton);
             this.Controls.Add(this.acceptButton);
             this.Controls.Add(this.editButton);
@@ -190,11 +238,11 @@
             this.Controls.Add(this.firstNameTextBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.loginTextBox);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.avatarPictureBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AdminMoreUserInfoForm";
             this.Text = "\"Название\". Администратор. Информация о пользователе";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.avatarPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,7 +250,7 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox avatarPictureBox;
         private System.Windows.Forms.TextBox loginTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox firstNameTextBox;
@@ -216,5 +264,10 @@
         private System.Windows.Forms.Button editButton;
         private System.Windows.Forms.Button acceptButton;
         private System.Windows.Forms.Button declineButton;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox statusComboBox;
+        private System.Windows.Forms.Button addPictureButton;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }

@@ -41,7 +41,10 @@ namespace ComputerShop
                 secondNameTextBox.Text = toShow.SecondName;
                 phoneTextBox.Text = toShow.Phone;
                 emailTextBox.Text = toShow.Email;
+                avatarPictureBox.ImageLocation = toShow.ImagePath;
             }
+
+            return;
         }
 
         private void editButton_Click(object sender, EventArgs e)
@@ -49,12 +52,14 @@ namespace ComputerShop
             acceptButton.Visible = true;
             declineButton.Visible = true;
             editButton.Visible = false;
+            addPictureButton.Visible = true;
 
             loginTextBox.ReadOnly = false;
             firstNameTextBox.ReadOnly = false;
             secondNameTextBox.ReadOnly = false;
             phoneTextBox.ReadOnly = false;
             emailTextBox.ReadOnly = false;
+            statusComboBox.Enabled = true;
         }
 
         private void acceptButton_Click(object sender, EventArgs e)
@@ -66,6 +71,11 @@ namespace ComputerShop
                 string secondName = secondNameTextBox.Text;
                 string email = emailTextBox.Text;
                 string phone = phoneTextBox.Text;
+                string status = statusComboBox.Text;
+                string imgPath = avatarPictureBox.ImageLocation;
+
+                if (avatarPictureBox.ImageLocation == "")
+                    imgPath = "D:\\Univer\\4sem\\practice\\computerShop\\ComputerShop\\img\\noAvatar.png";
 
                 User editing = db.Users.SingleOrDefault(u => u.Id == userId);
 
@@ -110,14 +120,25 @@ namespace ComputerShop
                 editing.SecondName = secondName;
                 editing.Email = email;
                 editing.Phone = phone;
+                editing.Status = status;
+                editing.ImagePath = imgPath;
 
                 db.SaveChanges();
             }
 
+            loginTextBox.ReadOnly = true;
+            firstNameTextBox.ReadOnly = true;
+            secondNameTextBox.ReadOnly = true;
+            phoneTextBox.ReadOnly = true;
+            emailTextBox.ReadOnly = true;
+            statusComboBox.Enabled = false;
 
             acceptButton.Visible = false;
             declineButton.Visible = false;
             editButton.Visible = true;
+            addPictureButton.Visible = false;
+
+            return;
         }
 
         private void declineButton_Click(object sender, EventArgs e)
@@ -140,9 +161,26 @@ namespace ComputerShop
                 emailTextBox.Text = toShow.Email;
             }
 
+            loginTextBox.ReadOnly = true;
+            firstNameTextBox.ReadOnly = true;
+            secondNameTextBox.ReadOnly = true;
+            phoneTextBox.ReadOnly = true;
+            emailTextBox.ReadOnly = true;
+            statusComboBox.Enabled = false;
+
             acceptButton.Visible = false;
             declineButton.Visible = false;
             editButton.Visible = true;
+            addPictureButton.Visible = false;
+
+            return;
+        }
+
+        private void addPictureButton_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+
+            avatarPictureBox.ImageLocation = openFileDialog1.FileName;
         }
     }
 }

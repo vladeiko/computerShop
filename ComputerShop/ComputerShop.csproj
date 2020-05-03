@@ -56,16 +56,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\AdminForms\AdminMoreUserInfoForm.cs">
+    <Compile Include="Forms\AdminForms\UsersForms\AddUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AdminForms\AdminMoreUserInfoForm.Designer.cs">
+    <Compile Include="Forms\AdminForms\UsersForms\AddUserForm.Designer.cs">
+      <DependentUpon>AddUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\UsersForms\AdminAcceptDeletingUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\UsersForms\AdminAcceptDeletingUser.Designer.cs">
+      <DependentUpon>AdminAcceptDeletingUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\UsersForms\AdminMoreUserInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\UsersForms\AdminMoreUserInfoForm.Designer.cs">
       <DependentUpon>AdminMoreUserInfoForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AdminForms\AdminShowUsersForm.cs">
+    <Compile Include="Forms\AdminForms\UsersForms\AdminShowUsersForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AdminForms\AdminShowUsersForm.Designer.cs">
+    <Compile Include="Forms\AdminForms\UsersForms\AdminShowUsersForm.Designer.cs">
       <DependentUpon>AdminShowUsersForm.cs</DependentUpon>
     </Compile>
     <Compile Include="CurrentUser.cs" />
@@ -99,6 +111,10 @@
     <Compile Include="Migrations\202004301814308_emailAndPhoneStrings.designer.cs">
       <DependentUpon>202004301814308_emailAndPhoneStrings.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202005032114449_fixBugs.cs" />
+    <Compile Include="Migrations\202005032114449_fixBugs.designer.cs">
+      <DependentUpon>202005032114449_fixBugs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="DataBase\MyDbContext.cs" />
     <Compile Include="Forms\RegistrationForm.cs">
@@ -123,10 +139,16 @@
       <DependentUpon>UserForm1.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\PasswordHasher.cs" />
-    <EmbeddedResource Include="Forms\AdminForms\AdminMoreUserInfoForm.resx">
+    <EmbeddedResource Include="Forms\AdminForms\UsersForms\AddUserForm.resx">
+      <DependentUpon>AddUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\UsersForms\AdminAcceptDeletingUser.resx">
+      <DependentUpon>AdminAcceptDeletingUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\UsersForms\AdminMoreUserInfoForm.resx">
       <DependentUpon>AdminMoreUserInfoForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminForms\AdminShowUsersForm.resx">
+    <EmbeddedResource Include="Forms\AdminForms\UsersForms\AdminShowUsersForm.resx">
       <DependentUpon>AdminShowUsersForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminForms\AdminStartForm.resx">
@@ -152,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004301814308_emailAndPhoneStrings.resx">
       <DependentUpon>202004301814308_emailAndPhoneStrings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005032114449_fixBugs.resx">
+      <DependentUpon>202005032114449_fixBugs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

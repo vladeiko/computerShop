@@ -31,9 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminShowUsersForm));
             this.label1 = new System.Windows.Forms.Label();
             this.usersDataGrid = new System.Windows.Forms.DataGridView();
-            this.goBackButton = new System.Windows.Forms.Button();
-            this.showMoreButton = new System.Windows.Forms.Button();
-            this.reloadButton = new System.Windows.Forms.Button();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Login = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,14 +38,19 @@
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.goBackButton = new System.Windows.Forms.Button();
+            this.showMoreButton = new System.Windows.Forms.Button();
+            this.reloadButton = new System.Windows.Forms.Button();
             this.addNewUserButton = new System.Windows.Forms.Button();
+            this.deleteButton = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.usersDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(801, 12);
+            this.label1.Location = new System.Drawing.Point(762, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 13);
             this.label1.TabIndex = 0;
@@ -67,41 +69,9 @@
             this.Status});
             this.usersDataGrid.Location = new System.Drawing.Point(12, 12);
             this.usersDataGrid.Name = "usersDataGrid";
-            this.usersDataGrid.Size = new System.Drawing.Size(783, 306);
+            this.usersDataGrid.RowHeadersVisible = false;
+            this.usersDataGrid.Size = new System.Drawing.Size(743, 300);
             this.usersDataGrid.TabIndex = 1;
-            // 
-            // goBackButton
-            // 
-            this.goBackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.goBackButton.Location = new System.Drawing.Point(12, 415);
-            this.goBackButton.Name = "goBackButton";
-            this.goBackButton.Size = new System.Drawing.Size(75, 23);
-            this.goBackButton.TabIndex = 2;
-            this.goBackButton.Text = "НАЗАД";
-            this.goBackButton.UseVisualStyleBackColor = true;
-            this.goBackButton.Click += new System.EventHandler(this.goBackButton_Click);
-            // 
-            // showMoreButton
-            // 
-            this.showMoreButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.showMoreButton.Location = new System.Drawing.Point(13, 325);
-            this.showMoreButton.Name = "showMoreButton";
-            this.showMoreButton.Size = new System.Drawing.Size(92, 29);
-            this.showMoreButton.TabIndex = 3;
-            this.showMoreButton.Text = "Подробнее";
-            this.showMoreButton.UseVisualStyleBackColor = true;
-            this.showMoreButton.Click += new System.EventHandler(this.showMoreButton_Click);
-            // 
-            // reloadButton
-            // 
-            this.reloadButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.reloadButton.Location = new System.Drawing.Point(214, 325);
-            this.reloadButton.Name = "reloadButton";
-            this.reloadButton.Size = new System.Drawing.Size(92, 29);
-            this.reloadButton.TabIndex = 4;
-            this.reloadButton.Text = "Обновить";
-            this.reloadButton.UseVisualStyleBackColor = true;
-            this.reloadButton.Click += new System.EventHandler(this.reloadButton_Click);
             // 
             // id
             // 
@@ -155,6 +125,39 @@
             this.Status.ReadOnly = true;
             this.Status.Width = 50;
             // 
+            // goBackButton
+            // 
+            this.goBackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.goBackButton.Location = new System.Drawing.Point(12, 415);
+            this.goBackButton.Name = "goBackButton";
+            this.goBackButton.Size = new System.Drawing.Size(75, 23);
+            this.goBackButton.TabIndex = 2;
+            this.goBackButton.Text = "НАЗАД";
+            this.goBackButton.UseVisualStyleBackColor = true;
+            this.goBackButton.Click += new System.EventHandler(this.goBackButton_Click);
+            // 
+            // showMoreButton
+            // 
+            this.showMoreButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.showMoreButton.Location = new System.Drawing.Point(13, 325);
+            this.showMoreButton.Name = "showMoreButton";
+            this.showMoreButton.Size = new System.Drawing.Size(92, 29);
+            this.showMoreButton.TabIndex = 3;
+            this.showMoreButton.Text = "Подробнее";
+            this.showMoreButton.UseVisualStyleBackColor = true;
+            this.showMoreButton.Click += new System.EventHandler(this.showMoreButton_Click);
+            // 
+            // reloadButton
+            // 
+            this.reloadButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.reloadButton.Location = new System.Drawing.Point(312, 325);
+            this.reloadButton.Name = "reloadButton";
+            this.reloadButton.Size = new System.Drawing.Size(92, 29);
+            this.reloadButton.TabIndex = 4;
+            this.reloadButton.Text = "Обновить";
+            this.reloadButton.UseVisualStyleBackColor = true;
+            this.reloadButton.Click += new System.EventHandler(this.reloadButton_Click);
+            // 
             // addNewUserButton
             // 
             this.addNewUserButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -164,12 +167,29 @@
             this.addNewUserButton.TabIndex = 5;
             this.addNewUserButton.Text = "Добавить";
             this.addNewUserButton.UseVisualStyleBackColor = true;
+            this.addNewUserButton.Click += new System.EventHandler(this.addNewUserButton_Click);
+            // 
+            // deleteButton
+            // 
+            this.deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.deleteButton.Location = new System.Drawing.Point(213, 325);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.Size = new System.Drawing.Size(92, 29);
+            this.deleteButton.TabIndex = 6;
+            this.deleteButton.Text = "Удалить";
+            this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // AdminShowUsersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(893, 450);
+            this.ClientSize = new System.Drawing.Size(858, 450);
+            this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.addNewUserButton);
             this.Controls.Add(this.reloadButton);
             this.Controls.Add(this.showMoreButton);
@@ -201,5 +221,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Phone;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
         private System.Windows.Forms.Button addNewUserButton;
+        private System.Windows.Forms.Button deleteButton;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
