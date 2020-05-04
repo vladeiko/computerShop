@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminShowUsersForm));
             this.label1 = new System.Windows.Forms.Label();
             this.usersDataGrid = new System.Windows.Forms.DataGridView();
@@ -44,7 +45,9 @@
             this.addNewUserButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.usersDataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -67,7 +70,7 @@
             this.Email,
             this.Phone,
             this.Status});
-            this.usersDataGrid.Location = new System.Drawing.Point(12, 12);
+            this.usersDataGrid.Location = new System.Drawing.Point(12, 60);
             this.usersDataGrid.Name = "usersDataGrid";
             this.usersDataGrid.RowHeadersVisible = false;
             this.usersDataGrid.Size = new System.Drawing.Size(743, 300);
@@ -128,7 +131,7 @@
             // goBackButton
             // 
             this.goBackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.goBackButton.Location = new System.Drawing.Point(12, 415);
+            this.goBackButton.Location = new System.Drawing.Point(12, 12);
             this.goBackButton.Name = "goBackButton";
             this.goBackButton.Size = new System.Drawing.Size(75, 23);
             this.goBackButton.TabIndex = 2;
@@ -139,7 +142,7 @@
             // showMoreButton
             // 
             this.showMoreButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.showMoreButton.Location = new System.Drawing.Point(13, 325);
+            this.showMoreButton.Location = new System.Drawing.Point(13, 373);
             this.showMoreButton.Name = "showMoreButton";
             this.showMoreButton.Size = new System.Drawing.Size(92, 29);
             this.showMoreButton.TabIndex = 3;
@@ -150,7 +153,7 @@
             // reloadButton
             // 
             this.reloadButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.reloadButton.Location = new System.Drawing.Point(312, 325);
+            this.reloadButton.Location = new System.Drawing.Point(312, 373);
             this.reloadButton.Name = "reloadButton";
             this.reloadButton.Size = new System.Drawing.Size(92, 29);
             this.reloadButton.TabIndex = 4;
@@ -161,7 +164,7 @@
             // addNewUserButton
             // 
             this.addNewUserButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addNewUserButton.Location = new System.Drawing.Point(113, 325);
+            this.addNewUserButton.Location = new System.Drawing.Point(113, 373);
             this.addNewUserButton.Name = "addNewUserButton";
             this.addNewUserButton.Size = new System.Drawing.Size(92, 29);
             this.addNewUserButton.TabIndex = 5;
@@ -172,7 +175,7 @@
             // deleteButton
             // 
             this.deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.deleteButton.Location = new System.Drawing.Point(213, 325);
+            this.deleteButton.Location = new System.Drawing.Point(213, 373);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(92, 29);
             this.deleteButton.TabIndex = 6;
@@ -184,11 +187,15 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // userBindingSource
+            // 
+            this.userBindingSource.DataSource = typeof(ComputerShop.User);
+            // 
             // AdminShowUsersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(858, 450);
+            this.ClientSize = new System.Drawing.Size(854, 451);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.addNewUserButton);
             this.Controls.Add(this.reloadButton);
@@ -201,6 +208,7 @@
             this.Text = "\"Название\". Администратор. Просмотр пользователей";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdminShowUsersForm_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.usersDataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -223,5 +231,6 @@
         private System.Windows.Forms.Button addNewUserButton;
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.BindingSource userBindingSource;
     }
 }

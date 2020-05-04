@@ -22,6 +22,7 @@ namespace ComputerShop
         public AdminMoreUserInfoForm(int id)
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterParent;
 
             userId = id;
 

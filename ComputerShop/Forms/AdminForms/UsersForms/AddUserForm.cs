@@ -15,6 +15,7 @@ namespace ComputerShop
         public AdminAddUserForm()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterParent;
         }
 
         private void addButton_Click(object sender, EventArgs e)

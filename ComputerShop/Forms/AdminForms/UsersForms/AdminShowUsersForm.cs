@@ -19,7 +19,7 @@ namespace ComputerShop
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
 
-            using(var db = new MyDbContext())
+            using (var db = new MyDbContext())
             {
                 foreach(var u in db.Users)
                 {

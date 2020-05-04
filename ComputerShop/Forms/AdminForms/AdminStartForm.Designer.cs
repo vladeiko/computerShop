@@ -36,7 +36,7 @@
             // showUsersButton
             // 
             this.showUsersButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.showUsersButton.Location = new System.Drawing.Point(332, 74);
+            this.showUsersButton.Location = new System.Drawing.Point(212, 39);
             this.showUsersButton.Name = "showUsersButton";
             this.showUsersButton.Size = new System.Drawing.Size(148, 63);
             this.showUsersButton.TabIndex = 0;
@@ -47,7 +47,7 @@
             // goBackButton
             // 
             this.goBackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.goBackButton.Location = new System.Drawing.Point(366, 387);
+            this.goBackButton.Location = new System.Drawing.Point(246, 352);
             this.goBackButton.Name = "goBackButton";
             this.goBackButton.Size = new System.Drawing.Size(75, 27);
             this.goBackButton.TabIndex = 1;
@@ -59,7 +59,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(584, 411);
             this.Controls.Add(this.goBackButton);
             this.Controls.Add(this.showUsersButton);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

@@ -21,6 +21,7 @@ namespace ComputerShop
         public AdminAcceptDeletingUser(int id)
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterParent;
 
             userId = id;
         }
