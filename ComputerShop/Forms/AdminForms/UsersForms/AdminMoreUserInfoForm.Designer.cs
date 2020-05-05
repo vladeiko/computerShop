@@ -192,6 +192,7 @@
             // 
             this.statusComboBox.Enabled = false;
             this.statusComboBox.FormattingEnabled = true;
+            this.statusComboBox.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.statusComboBox.Items.AddRange(new object[] {
             "user",
             "admin"});

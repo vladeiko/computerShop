@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminShowUsersForm));
-            this.label1 = new System.Windows.Forms.Label();
             this.usersDataGrid = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Login = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,15 +48,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.usersDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(762, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ADMIN FORM 1";
             // 
             // usersDataGrid
             // 
@@ -202,7 +192,6 @@
             this.Controls.Add(this.showMoreButton);
             this.Controls.Add(this.goBackButton);
             this.Controls.Add(this.usersDataGrid);
-            this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AdminShowUsersForm";
             this.Text = "\"Premium PC\". Администратор. Просмотр пользователей";
@@ -210,13 +199,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.usersDataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView usersDataGrid;
         private System.Windows.Forms.Button goBackButton;
         private System.Windows.Forms.Button showMoreButton;

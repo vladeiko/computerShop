@@ -31,7 +31,7 @@ namespace ComputerShop
                 string status = statusComboBox.Text;
                 string imgPath = avatarPictureBox.ImageLocation;
 
-                if (avatarPictureBox.ImageLocation == "")
+                if (avatarPictureBox.ImageLocation == null)
                     imgPath = "D:\\Univer\\4sem\\practice\\computerShop\\ComputerShop\\img\\noAvatar.png";
 
                 // Error processing. Incorrectly entered data

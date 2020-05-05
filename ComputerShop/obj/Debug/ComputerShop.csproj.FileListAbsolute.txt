@@ -27,3 +27,8 @@ D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.AdminAc
 D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.Migrations.fixBugs.resources
 D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.Migrations.addcomputersandcomponentparts.resources
 D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.Migrations.FixbugwithRAMname.resources
+D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.AdminShowCPUsForm.resources
+D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.AdminMoreCPUInfoForm.resources
+D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.AdminAcceptDeletingProc.resources
+D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.AdminAddCPUForm.resources
+D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.Migrations.Add_computer_price.resources

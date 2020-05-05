@@ -36,5 +36,12 @@ namespace ComputerShop
             form.Show();
             Hide();
         }
+
+        private void showProcessorsButton_Click(object sender, EventArgs e)
+        {
+            AdminShowCPUsForm form = new AdminShowCPUsForm();
+            form.Show();
+            Hide();
+        }
     }
 }

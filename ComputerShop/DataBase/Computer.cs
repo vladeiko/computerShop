@@ -14,6 +14,7 @@ namespace ComputerShop
         public int ProcessorId { get; set; }
         public int VideocardId { get; set; }
         public int RAMId { get; set; }
+        public double Price { get; set; }
         public string ImagePath { get; set; }
 
         public virtual Processor Processor { get; set; }

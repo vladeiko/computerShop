@@ -51,7 +51,7 @@
             // bSignUp
             // 
             this.bSignUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bSignUp.Location = new System.Drawing.Point(207, 304);
+            this.bSignUp.Location = new System.Drawing.Point(209, 304);
             this.bSignUp.Margin = new System.Windows.Forms.Padding(2);
             this.bSignUp.Name = "bSignUp";
             this.bSignUp.Size = new System.Drawing.Size(100, 30);
@@ -78,9 +78,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(182, 17);
+            this.pictureBox1.Location = new System.Drawing.Point(184, 17);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(160, 160);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 

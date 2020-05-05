@@ -60,6 +60,30 @@
     <Compile Include="DataBase\Processor.cs" />
     <Compile Include="DataBase\RAM.cs" />
     <Compile Include="DataBase\Videocard.cs" />
+    <Compile Include="Forms\AdminForms\CPUsForms\AdminAcceptDeletingProc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\CPUsForms\AdminAcceptDeletingProc.Designer.cs">
+      <DependentUpon>AdminAcceptDeletingProc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\CPUsForms\AdminAddCPUForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\CPUsForms\AdminAddCPUForm.Designer.cs">
+      <DependentUpon>AdminAddCPUForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\CPUsForms\AdminMoreCPUInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\CPUsForms\AdminMoreCPUInfoForm.Designer.cs">
+      <DependentUpon>AdminMoreCPUInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\CPUsForms\AdminShowCPUsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\CPUsForms\AdminShowCPUsForm.Designer.cs">
+      <DependentUpon>AdminShowCPUsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AdminForms\UsersForms\AddUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +151,10 @@
     <Compile Include="Migrations\202005042101352_Fix bug with RAM name.designer.cs">
       <DependentUpon>202005042101352_Fix bug with RAM name.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202005051824274_Add_computer_price.cs" />
+    <Compile Include="Migrations\202005051824274_Add_computer_price.designer.cs">
+      <DependentUpon>202005051824274_Add_computer_price.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="DataBase\MyDbContext.cs" />
     <Compile Include="Forms\RegistrationForm.cs">
@@ -151,6 +179,18 @@
       <DependentUpon>UserForm1.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\PasswordHasher.cs" />
+    <EmbeddedResource Include="Forms\AdminForms\CPUsForms\AdminAcceptDeletingProc.resx">
+      <DependentUpon>AdminAcceptDeletingProc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\CPUsForms\AdminAddCPUForm.resx">
+      <DependentUpon>AdminAddCPUForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\CPUsForms\AdminMoreCPUInfoForm.resx">
+      <DependentUpon>AdminMoreCPUInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\CPUsForms\AdminShowCPUsForm.resx">
+      <DependentUpon>AdminShowCPUsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminForms\UsersForms\AddUserForm.resx">
       <DependentUpon>AddUserForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -196,6 +236,9 @@
     <EmbeddedResource Include="Migrations\202005042101352_Fix bug with RAM name.resx">
       <DependentUpon>202005042101352_Fix bug with RAM name.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005051824274_Add_computer_price.resx">
+      <DependentUpon>202005051824274_Add_computer_price.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -222,6 +265,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Forms\AdminForms\ComputersForms\" />
+    <Folder Include="Forms\AdminForms\RAMsForms\" />
+    <Folder Include="Forms\AdminForms\VideocardsForms\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
