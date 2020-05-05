@@ -72,7 +72,7 @@
             this.shopName.Name = "shopName";
             this.shopName.Size = new System.Drawing.Size(219, 34);
             this.shopName.TabIndex = 2;
-            this.shopName.Text = "Магазин компьютерной техники\r\n\"Название\"";
+            this.shopName.Text = "Магазин компьютерной техники\r\n\"Premium PC\"";
             this.shopName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // pictureBox1
@@ -96,7 +96,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "StartForm";
-            this.Text = "\"Название\". Приветствие";
+            this.Text = "\"Premium PC\". Приветствие";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.StartForm_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

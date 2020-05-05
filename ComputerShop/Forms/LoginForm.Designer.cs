@@ -120,7 +120,7 @@
             this.Controls.Add(this.LoginButton);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginForm";
-            this.Text = "\"Название\". Авторизация";
+            this.Text = "\"Premium PC\". Авторизация";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.LoginForm_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();

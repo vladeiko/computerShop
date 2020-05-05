@@ -205,7 +205,7 @@
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AdminShowUsersForm";
-            this.Text = "\"Название\". Администратор. Просмотр пользователей";
+            this.Text = "\"Premium PC\". Администратор. Просмотр пользователей";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdminShowUsersForm_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.usersDataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();

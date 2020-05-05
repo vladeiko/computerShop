@@ -25,3 +25,5 @@ D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.AdminMo
 D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.AdminAddUserForm.resources
 D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.AdminAcceptDeletingUser.resources
 D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.Migrations.fixBugs.resources
+D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.Migrations.addcomputersandcomponentparts.resources
+D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.Migrations.FixbugwithRAMname.resources

@@ -49,7 +49,7 @@
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UserForm1";
-            this.Text = "\"Название\". Пользователь";
+            this.Text = "\"Premium PC\". Пользователь";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.UserForm1_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();

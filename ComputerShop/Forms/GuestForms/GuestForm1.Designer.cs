@@ -49,7 +49,7 @@
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GuestForm1";
-            this.Text = "\"Название\". Гость";
+            this.Text = "\"Premium PC\". Гость";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.GuestForm1_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();

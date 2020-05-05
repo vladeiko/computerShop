@@ -241,7 +241,7 @@
             this.Controls.Add(this.avatarPictureBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AdminMoreUserInfoForm";
-            this.Text = "\"Название\". Администратор. Информация о пользователе";
+            this.Text = "\"Premium PC\". Администратор. Информация о пользователе";
             ((System.ComponentModel.ISupportInitialize)(this.avatarPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -64,7 +64,7 @@
             this.Controls.Add(this.showUsersButton);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AdminStartForm";
-            this.Text = "\"Название\". Администратор. Начало";
+            this.Text = "\"Premium PC\". Администратор. Начало";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdminStartForm_FormClosed);
             this.ResumeLayout(false);
 

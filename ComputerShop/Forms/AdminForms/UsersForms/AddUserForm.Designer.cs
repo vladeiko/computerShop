@@ -230,7 +230,7 @@
             this.Controls.Add(this.avatarPictureBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AdminAddUserForm";
-            this.Text = "\"Название\". Администратор. Добавить пользователя";
+            this.Text = "\"Premium PC\". Администратор. Добавить пользователя";
             ((System.ComponentModel.ISupportInitialize)(this.avatarPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
