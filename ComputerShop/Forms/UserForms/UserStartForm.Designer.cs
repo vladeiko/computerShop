@@ -82,6 +82,7 @@
             this.reloadButton.TabIndex = 35;
             this.reloadButton.Text = "Обновить";
             this.reloadButton.UseVisualStyleBackColor = true;
+            this.reloadButton.Click += new System.EventHandler(this.reloadButton_Click);
             // 
             // computersDataGrid
             // 

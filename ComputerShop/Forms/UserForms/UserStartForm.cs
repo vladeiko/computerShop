@@ -53,5 +53,21 @@ namespace ComputerShop
                 return;
             }
         }
+
+        private void reloadButton_Click(object sender, EventArgs e)
+        {
+            using(var db = new MyDbContext())
+            {
+                db.Computers.Load();
+                db.Processors.Load();
+                db.Videocards.Load();
+                db.RAMs.Load();
+
+                computersDataGrid.SelectAll();
+                computersDataGrid.ClearSelection();
+
+                computersDataGrid.DataSource = db.Computers.Local.ToBindingList();
+            }
+        }
     }
 }
