@@ -12,6 +12,6 @@ namespace ComputerShop
         public string Name { get; set; }
         public int VideoMemory { get; set; }
 
-        public ICollection<Computer> Computers { get; set; }
+        public virtual ICollection<Computer> Computers { get; set; }
     }
 }

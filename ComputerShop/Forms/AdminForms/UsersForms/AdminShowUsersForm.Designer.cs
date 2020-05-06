@@ -60,7 +60,7 @@
             this.Email,
             this.Phone,
             this.Status});
-            this.usersDataGrid.Location = new System.Drawing.Point(12, 60);
+            this.usersDataGrid.Location = new System.Drawing.Point(56, 60);
             this.usersDataGrid.Name = "usersDataGrid";
             this.usersDataGrid.RowHeadersVisible = false;
             this.usersDataGrid.Size = new System.Drawing.Size(743, 300);
@@ -121,7 +121,7 @@
             // goBackButton
             // 
             this.goBackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.goBackButton.Location = new System.Drawing.Point(12, 12);
+            this.goBackButton.Location = new System.Drawing.Point(56, 12);
             this.goBackButton.Name = "goBackButton";
             this.goBackButton.Size = new System.Drawing.Size(75, 23);
             this.goBackButton.TabIndex = 2;
@@ -132,7 +132,7 @@
             // showMoreButton
             // 
             this.showMoreButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.showMoreButton.Location = new System.Drawing.Point(13, 373);
+            this.showMoreButton.Location = new System.Drawing.Point(57, 373);
             this.showMoreButton.Name = "showMoreButton";
             this.showMoreButton.Size = new System.Drawing.Size(92, 29);
             this.showMoreButton.TabIndex = 3;
@@ -143,7 +143,7 @@
             // reloadButton
             // 
             this.reloadButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.reloadButton.Location = new System.Drawing.Point(312, 373);
+            this.reloadButton.Location = new System.Drawing.Point(356, 373);
             this.reloadButton.Name = "reloadButton";
             this.reloadButton.Size = new System.Drawing.Size(92, 29);
             this.reloadButton.TabIndex = 4;
@@ -154,7 +154,7 @@
             // addNewUserButton
             // 
             this.addNewUserButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addNewUserButton.Location = new System.Drawing.Point(113, 373);
+            this.addNewUserButton.Location = new System.Drawing.Point(157, 373);
             this.addNewUserButton.Name = "addNewUserButton";
             this.addNewUserButton.Size = new System.Drawing.Size(92, 29);
             this.addNewUserButton.TabIndex = 5;
@@ -165,7 +165,7 @@
             // deleteButton
             // 
             this.deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.deleteButton.Location = new System.Drawing.Point(213, 373);
+            this.deleteButton.Location = new System.Drawing.Point(257, 373);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(92, 29);
             this.deleteButton.TabIndex = 6;

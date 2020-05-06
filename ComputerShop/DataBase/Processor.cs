@@ -13,6 +13,6 @@ namespace ComputerShop
         public int NumOfCores { get; set; }
         public int ClockFrequency { get; set; }
 
-        public ICollection<Computer> Computers { get; set; }
+        public virtual ICollection<Computer> Computers { get; set; }
     }
 }

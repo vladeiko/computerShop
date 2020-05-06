@@ -60,6 +60,12 @@
     <Compile Include="DataBase\Processor.cs" />
     <Compile Include="DataBase\RAM.cs" />
     <Compile Include="DataBase\Videocard.cs" />
+    <Compile Include="Forms\AdminForms\ComputersForms\AdminShowComputersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\ComputersForms\AdminShowComputersForm.Designer.cs">
+      <DependentUpon>AdminShowComputersForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AdminForms\CPUsForms\AdminAcceptDeletingProc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,30 @@
     </Compile>
     <Compile Include="Forms\AdminForms\CPUsForms\AdminShowCPUsForm.Designer.cs">
       <DependentUpon>AdminShowCPUsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\RAMsForms\AdminAcceptDeletingRam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\RAMsForms\AdminAcceptDeletingRam.Designer.cs">
+      <DependentUpon>AdminAcceptDeletingRam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\RAMsForms\AdminAddRamForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\RAMsForms\AdminAddRamForm.Designer.cs">
+      <DependentUpon>AdminAddRamForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\RAMsForms\AdminMoreRAMInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\RAMsForms\AdminMoreRAMInfoForm.Designer.cs">
+      <DependentUpon>AdminMoreRAMInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\RAMsForms\AdminShowRAMsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\RAMsForms\AdminShowRAMsForm.Designer.cs">
+      <DependentUpon>AdminShowRAMsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\AdminForms\UsersForms\AddUserForm.cs">
       <SubType>Form</SubType>
@@ -114,6 +144,30 @@
     </Compile>
     <Compile Include="Forms\AdminForms\AdminStartForm.Designer.cs">
       <DependentUpon>AdminStartForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\VideocardsForms\AdminAcceptDeletingVideo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\VideocardsForms\AdminAcceptDeletingVideo.Designer.cs">
+      <DependentUpon>AdminAcceptDeletingVideo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\VideocardsForms\AdminAddVideocardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\VideocardsForms\AdminAddVideocardForm.Designer.cs">
+      <DependentUpon>AdminAddVideocardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\VideocardsForms\AdminMoreVideoInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\VideocardsForms\AdminMoreVideoInfoForm.Designer.cs">
+      <DependentUpon>AdminMoreVideoInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\VideocardsForms\AdminShowVideocardsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\VideocardsForms\AdminShowVideocardsForm.Designer.cs">
+      <DependentUpon>AdminShowVideocardsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\GuestForms\GuestForm1.cs">
       <SubType>Form</SubType>
@@ -155,6 +209,10 @@
     <Compile Include="Migrations\202005051824274_Add_computer_price.designer.cs">
       <DependentUpon>202005051824274_Add_computer_price.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202005061630537_testComputers.cs" />
+    <Compile Include="Migrations\202005061630537_testComputers.designer.cs">
+      <DependentUpon>202005061630537_testComputers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="DataBase\MyDbContext.cs" />
     <Compile Include="Forms\RegistrationForm.cs">
@@ -179,6 +237,9 @@
       <DependentUpon>UserForm1.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\PasswordHasher.cs" />
+    <EmbeddedResource Include="Forms\AdminForms\ComputersForms\AdminShowComputersForm.resx">
+      <DependentUpon>AdminShowComputersForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminForms\CPUsForms\AdminAcceptDeletingProc.resx">
       <DependentUpon>AdminAcceptDeletingProc.cs</DependentUpon>
     </EmbeddedResource>
@@ -190,6 +251,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminForms\CPUsForms\AdminShowCPUsForm.resx">
       <DependentUpon>AdminShowCPUsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\RAMsForms\AdminAcceptDeletingRam.resx">
+      <DependentUpon>AdminAcceptDeletingRam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\RAMsForms\AdminAddRamForm.resx">
+      <DependentUpon>AdminAddRamForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\RAMsForms\AdminMoreRAMInfoForm.resx">
+      <DependentUpon>AdminMoreRAMInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\RAMsForms\AdminShowRAMsForm.resx">
+      <DependentUpon>AdminShowRAMsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminForms\UsersForms\AddUserForm.resx">
       <DependentUpon>AddUserForm.cs</DependentUpon>
@@ -205,6 +278,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminForms\AdminStartForm.resx">
       <DependentUpon>AdminStartForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\VideocardsForms\AdminAcceptDeletingVideo.resx">
+      <DependentUpon>AdminAcceptDeletingVideo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\VideocardsForms\AdminAddVideocardForm.resx">
+      <DependentUpon>AdminAddVideocardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\VideocardsForms\AdminMoreVideoInfoForm.resx">
+      <DependentUpon>AdminMoreVideoInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\VideocardsForms\AdminShowVideocardsForm.resx">
+      <DependentUpon>AdminShowVideocardsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\GuestForms\GuestForm1.resx">
       <DependentUpon>GuestForm1.cs</DependentUpon>
@@ -239,6 +324,9 @@
     <EmbeddedResource Include="Migrations\202005051824274_Add_computer_price.resx">
       <DependentUpon>202005051824274_Add_computer_price.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005061630537_testComputers.resx">
+      <DependentUpon>202005061630537_testComputers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -266,11 +354,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Forms\AdminForms\ComputersForms\" />
-    <Folder Include="Forms\AdminForms\RAMsForms\" />
-    <Folder Include="Forms\AdminForms\VideocardsForms\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

@@ -43,5 +43,26 @@ namespace ComputerShop
             form.Show();
             Hide();
         }
+
+        private void showVideocardsButton_Click(object sender, EventArgs e)
+        {
+            AdminShowVideocardsForm form = new AdminShowVideocardsForm();
+            form.Show();
+            Hide();
+        }
+
+        private void showRAMsButton_Click(object sender, EventArgs e)
+        {
+            AdminShowRAMsForm form = new AdminShowRAMsForm();
+            form.Show();
+            Hide();
+        }
+
+        private void showComputersButton_Click(object sender, EventArgs e)
+        {
+            AdminShowComputersForm form = new AdminShowComputersForm();
+            form.Show();
+            Hide();
+        }
     }
 }

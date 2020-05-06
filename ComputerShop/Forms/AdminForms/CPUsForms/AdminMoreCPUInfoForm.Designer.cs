@@ -154,6 +154,7 @@
             this.Controls.Add(this.declineButton);
             this.Controls.Add(this.acceptButton);
             this.Controls.Add(this.editButton);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AdminMoreCPUInfoForm";
             this.Text = "\"Premium PC\". Администратор. Информация о процессоре";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
