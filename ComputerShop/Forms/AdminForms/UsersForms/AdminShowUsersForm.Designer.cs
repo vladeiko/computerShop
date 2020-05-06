@@ -31,14 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminShowUsersForm));
             this.usersDataGrid = new System.Windows.Forms.DataGridView();
-            this.goBackButton = new System.Windows.Forms.Button();
-            this.showMoreButton = new System.Windows.Forms.Button();
-            this.reloadButton = new System.Windows.Forms.Button();
-            this.addNewUserButton = new System.Windows.Forms.Button();
-            this.deleteButton = new System.Windows.Forms.Button();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.userBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.loginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,9 +40,17 @@
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imagePathDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.goBackButton = new System.Windows.Forms.Button();
+            this.showMoreButton = new System.Windows.Forms.Button();
+            this.reloadButton = new System.Windows.Forms.Button();
+            this.addButton = new System.Windows.Forms.Button();
+            this.deleteButton = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.usersDataGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // usersDataGrid
@@ -73,73 +73,6 @@
             this.usersDataGrid.RowHeadersVisible = false;
             this.usersDataGrid.Size = new System.Drawing.Size(743, 300);
             this.usersDataGrid.TabIndex = 1;
-            // 
-            // goBackButton
-            // 
-            this.goBackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.goBackButton.Location = new System.Drawing.Point(56, 12);
-            this.goBackButton.Name = "goBackButton";
-            this.goBackButton.Size = new System.Drawing.Size(75, 23);
-            this.goBackButton.TabIndex = 2;
-            this.goBackButton.Text = "НАЗАД";
-            this.goBackButton.UseVisualStyleBackColor = true;
-            this.goBackButton.Click += new System.EventHandler(this.goBackButton_Click);
-            // 
-            // showMoreButton
-            // 
-            this.showMoreButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.showMoreButton.Location = new System.Drawing.Point(57, 373);
-            this.showMoreButton.Name = "showMoreButton";
-            this.showMoreButton.Size = new System.Drawing.Size(92, 29);
-            this.showMoreButton.TabIndex = 3;
-            this.showMoreButton.Text = "Подробнее";
-            this.showMoreButton.UseVisualStyleBackColor = true;
-            this.showMoreButton.Click += new System.EventHandler(this.showMoreButton_Click);
-            // 
-            // reloadButton
-            // 
-            this.reloadButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.reloadButton.Location = new System.Drawing.Point(356, 373);
-            this.reloadButton.Name = "reloadButton";
-            this.reloadButton.Size = new System.Drawing.Size(92, 29);
-            this.reloadButton.TabIndex = 4;
-            this.reloadButton.Text = "Обновить";
-            this.reloadButton.UseVisualStyleBackColor = true;
-            this.reloadButton.Click += new System.EventHandler(this.reloadButton_Click);
-            // 
-            // addNewUserButton
-            // 
-            this.addNewUserButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addNewUserButton.Location = new System.Drawing.Point(157, 373);
-            this.addNewUserButton.Name = "addNewUserButton";
-            this.addNewUserButton.Size = new System.Drawing.Size(92, 29);
-            this.addNewUserButton.TabIndex = 5;
-            this.addNewUserButton.Text = "Добавить";
-            this.addNewUserButton.UseVisualStyleBackColor = true;
-            this.addNewUserButton.Click += new System.EventHandler(this.addNewUserButton_Click);
-            // 
-            // deleteButton
-            // 
-            this.deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.deleteButton.Location = new System.Drawing.Point(257, 373);
-            this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new System.Drawing.Size(92, 29);
-            this.deleteButton.TabIndex = 6;
-            this.deleteButton.Text = "Удалить";
-            this.deleteButton.UseVisualStyleBackColor = true;
-            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // userBindingSource
-            // 
-            this.userBindingSource.DataSource = typeof(ComputerShop.User);
-            // 
-            // userBindingSource1
-            // 
-            this.userBindingSource1.DataSource = typeof(ComputerShop.User);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -202,13 +135,80 @@
             this.imagePathDataGridViewTextBoxColumn.Name = "imagePathDataGridViewTextBoxColumn";
             this.imagePathDataGridViewTextBoxColumn.Visible = false;
             // 
+            // userBindingSource1
+            // 
+            this.userBindingSource1.DataSource = typeof(ComputerShop.User);
+            // 
+            // goBackButton
+            // 
+            this.goBackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.goBackButton.Location = new System.Drawing.Point(56, 12);
+            this.goBackButton.Name = "goBackButton";
+            this.goBackButton.Size = new System.Drawing.Size(75, 23);
+            this.goBackButton.TabIndex = 2;
+            this.goBackButton.Text = "НАЗАД";
+            this.goBackButton.UseVisualStyleBackColor = true;
+            this.goBackButton.Click += new System.EventHandler(this.goBackButton_Click);
+            // 
+            // showMoreButton
+            // 
+            this.showMoreButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.showMoreButton.Location = new System.Drawing.Point(57, 373);
+            this.showMoreButton.Name = "showMoreButton";
+            this.showMoreButton.Size = new System.Drawing.Size(92, 29);
+            this.showMoreButton.TabIndex = 3;
+            this.showMoreButton.Text = "Подробнее";
+            this.showMoreButton.UseVisualStyleBackColor = true;
+            this.showMoreButton.Click += new System.EventHandler(this.showMoreButton_Click);
+            // 
+            // reloadButton
+            // 
+            this.reloadButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.reloadButton.Location = new System.Drawing.Point(356, 373);
+            this.reloadButton.Name = "reloadButton";
+            this.reloadButton.Size = new System.Drawing.Size(92, 29);
+            this.reloadButton.TabIndex = 4;
+            this.reloadButton.Text = "Обновить";
+            this.reloadButton.UseVisualStyleBackColor = true;
+            this.reloadButton.Click += new System.EventHandler(this.reloadButton_Click);
+            // 
+            // addButton
+            // 
+            this.addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addButton.Location = new System.Drawing.Point(157, 373);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(92, 29);
+            this.addButton.TabIndex = 5;
+            this.addButton.Text = "Добавить";
+            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.addNewUserButton_Click);
+            // 
+            // deleteButton
+            // 
+            this.deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.deleteButton.Location = new System.Drawing.Point(257, 373);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.Size = new System.Drawing.Size(92, 29);
+            this.deleteButton.TabIndex = 6;
+            this.deleteButton.Text = "Удалить";
+            this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // userBindingSource
+            // 
+            this.userBindingSource.DataSource = typeof(ComputerShop.User);
+            // 
             // AdminShowUsersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(854, 451);
             this.Controls.Add(this.deleteButton);
-            this.Controls.Add(this.addNewUserButton);
+            this.Controls.Add(this.addButton);
             this.Controls.Add(this.reloadButton);
             this.Controls.Add(this.showMoreButton);
             this.Controls.Add(this.goBackButton);
@@ -218,8 +218,8 @@
             this.Text = "\"Premium PC\". Администратор. Просмотр пользователей";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdminShowUsersForm_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.usersDataGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -229,7 +229,7 @@
         private System.Windows.Forms.Button goBackButton;
         private System.Windows.Forms.Button showMoreButton;
         private System.Windows.Forms.Button reloadButton;
-        private System.Windows.Forms.Button addNewUserButton;
+        private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.BindingSource userBindingSource;

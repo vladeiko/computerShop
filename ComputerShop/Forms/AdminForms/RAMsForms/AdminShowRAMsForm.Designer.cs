@@ -31,20 +31,20 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminShowRAMsForm));
             this.deleteButton = new System.Windows.Forms.Button();
-            this.addRamButton = new System.Windows.Forms.Button();
+            this.addButton = new System.Windows.Forms.Button();
             this.reloadButton = new System.Windows.Forms.Button();
             this.showMoreButton = new System.Windows.Forms.Button();
             this.goBackButton = new System.Windows.Forms.Button();
             this.ramDataGrid = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.rAMBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sizeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.computersDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rAMBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ramDataGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rAMBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // deleteButton
@@ -58,16 +58,16 @@
             this.deleteButton.UseVisualStyleBackColor = true;
             this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
-            // addRamButton
+            // addButton
             // 
-            this.addRamButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addRamButton.Location = new System.Drawing.Point(241, 391);
-            this.addRamButton.Name = "addRamButton";
-            this.addRamButton.Size = new System.Drawing.Size(92, 29);
-            this.addRamButton.TabIndex = 23;
-            this.addRamButton.Text = "Добавить";
-            this.addRamButton.UseVisualStyleBackColor = true;
-            this.addRamButton.Click += new System.EventHandler(this.addRamButton_Click);
+            this.addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addButton.Location = new System.Drawing.Point(241, 391);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(92, 29);
+            this.addButton.TabIndex = 23;
+            this.addButton.Text = "Добавить";
+            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.addRamButton_Click);
             // 
             // reloadButton
             // 
@@ -118,20 +118,6 @@
             this.ramDataGrid.Size = new System.Drawing.Size(574, 300);
             this.ramDataGrid.TabIndex = 19;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(11, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(123, 100);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 25;
-            this.pictureBox1.TabStop = false;
-            // 
-            // rAMBindingSource
-            // 
-            this.rAMBindingSource.DataSource = typeof(ComputerShop.RAM);
-            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
@@ -161,6 +147,20 @@
             this.computersDataGridViewTextBoxColumn.Name = "computersDataGridViewTextBoxColumn";
             this.computersDataGridViewTextBoxColumn.Visible = false;
             // 
+            // rAMBindingSource
+            // 
+            this.rAMBindingSource.DataSource = typeof(ComputerShop.RAM);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(11, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(123, 100);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 25;
+            this.pictureBox1.TabStop = false;
+            // 
             // AdminShowRAMsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -168,7 +168,7 @@
             this.ClientSize = new System.Drawing.Size(854, 451);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.deleteButton);
-            this.Controls.Add(this.addRamButton);
+            this.Controls.Add(this.addButton);
             this.Controls.Add(this.reloadButton);
             this.Controls.Add(this.showMoreButton);
             this.Controls.Add(this.goBackButton);
@@ -178,8 +178,8 @@
             this.Text = "\"Premium PC\". Администратор. Просмотр ОЗУ";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdminShowRAMsForm_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.ramDataGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rAMBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -187,7 +187,7 @@
         #endregion
 
         private System.Windows.Forms.Button deleteButton;
-        private System.Windows.Forms.Button addRamButton;
+        private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Button reloadButton;
         private System.Windows.Forms.Button showMoreButton;
         private System.Windows.Forms.Button goBackButton;

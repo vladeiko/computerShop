@@ -31,20 +31,20 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminShowVideocardsForm));
             this.deleteButton = new System.Windows.Forms.Button();
-            this.addVideocardButton = new System.Windows.Forms.Button();
+            this.addButton = new System.Windows.Forms.Button();
             this.reloadButton = new System.Windows.Forms.Button();
             this.showMoreButton = new System.Windows.Forms.Button();
             this.goBackButton = new System.Windows.Forms.Button();
             this.videocardsDataGrid = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.videocardBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.videoMemoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.computersDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.videocardBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.videocardsDataGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.videocardBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // deleteButton
@@ -58,16 +58,16 @@
             this.deleteButton.UseVisualStyleBackColor = true;
             this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
-            // addVideocardButton
+            // addButton
             // 
-            this.addVideocardButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addVideocardButton.Location = new System.Drawing.Point(241, 391);
-            this.addVideocardButton.Name = "addVideocardButton";
-            this.addVideocardButton.Size = new System.Drawing.Size(92, 29);
-            this.addVideocardButton.TabIndex = 17;
-            this.addVideocardButton.Text = "Добавить";
-            this.addVideocardButton.UseVisualStyleBackColor = true;
-            this.addVideocardButton.Click += new System.EventHandler(this.addVideocardButton_Click);
+            this.addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addButton.Location = new System.Drawing.Point(241, 391);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(92, 29);
+            this.addButton.TabIndex = 17;
+            this.addButton.Text = "Добавить";
+            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.addVideocardButton_Click);
             // 
             // reloadButton
             // 
@@ -118,20 +118,6 @@
             this.videocardsDataGrid.Size = new System.Drawing.Size(574, 300);
             this.videocardsDataGrid.TabIndex = 13;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(11, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(123, 100);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 19;
-            this.pictureBox1.TabStop = false;
-            // 
-            // videocardBindingSource
-            // 
-            this.videocardBindingSource.DataSource = typeof(ComputerShop.Videocard);
-            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
@@ -161,6 +147,20 @@
             this.computersDataGridViewTextBoxColumn.Name = "computersDataGridViewTextBoxColumn";
             this.computersDataGridViewTextBoxColumn.Visible = false;
             // 
+            // videocardBindingSource
+            // 
+            this.videocardBindingSource.DataSource = typeof(ComputerShop.Videocard);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(11, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(123, 100);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
+            // 
             // AdminShowVideocardsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -168,7 +168,7 @@
             this.ClientSize = new System.Drawing.Size(854, 451);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.deleteButton);
-            this.Controls.Add(this.addVideocardButton);
+            this.Controls.Add(this.addButton);
             this.Controls.Add(this.reloadButton);
             this.Controls.Add(this.showMoreButton);
             this.Controls.Add(this.goBackButton);
@@ -178,8 +178,8 @@
             this.Text = "\"Premium PC\". Администратор. Просмотр видеокарт";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdminShowVideocardsForm_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.videocardsDataGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.videocardBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -187,7 +187,7 @@
         #endregion
 
         private System.Windows.Forms.Button deleteButton;
-        private System.Windows.Forms.Button addVideocardButton;
+        private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Button reloadButton;
         private System.Windows.Forms.Button showMoreButton;
         private System.Windows.Forms.Button goBackButton;

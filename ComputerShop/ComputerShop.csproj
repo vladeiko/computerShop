@@ -60,6 +60,18 @@
     <Compile Include="DataBase\Processor.cs" />
     <Compile Include="DataBase\RAM.cs" />
     <Compile Include="DataBase\Videocard.cs" />
+    <Compile Include="Forms\AdminForms\ComputersForms\acceptDeleteComp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\ComputersForms\acceptDeleteComp.Designer.cs">
+      <DependentUpon>acceptDeleteComp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\ComputersForms\AdminAddComputerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\ComputersForms\AdminAddComputerForm.Designer.cs">
+      <DependentUpon>AdminAddComputerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AdminForms\ComputersForms\AdminShowComputersForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -237,6 +249,12 @@
       <DependentUpon>UserForm1.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\PasswordHasher.cs" />
+    <EmbeddedResource Include="Forms\AdminForms\ComputersForms\acceptDeleteComp.resx">
+      <DependentUpon>acceptDeleteComp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\ComputersForms\AdminAddComputerForm.resx">
+      <DependentUpon>AdminAddComputerForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminForms\ComputersForms\AdminShowComputersForm.resx">
       <DependentUpon>AdminShowComputersForm.cs</DependentUpon>
     </EmbeddedResource>
