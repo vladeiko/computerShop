@@ -114,6 +114,7 @@
             this.ramDataGrid.DataSource = this.rAMBindingSource;
             this.ramDataGrid.Location = new System.Drawing.Point(140, 78);
             this.ramDataGrid.Name = "ramDataGrid";
+            this.ramDataGrid.ReadOnly = true;
             this.ramDataGrid.RowHeadersVisible = false;
             this.ramDataGrid.Size = new System.Drawing.Size(574, 300);
             this.ramDataGrid.TabIndex = 19;
@@ -123,6 +124,7 @@
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
             this.idDataGridViewTextBoxColumn.HeaderText = "Id";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
             this.idDataGridViewTextBoxColumn.Visible = false;
             // 
             // nameDataGridViewTextBoxColumn
@@ -131,6 +133,7 @@
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
             this.nameDataGridViewTextBoxColumn.HeaderText = "Название";
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // sizeDataGridViewTextBoxColumn
             // 
@@ -138,6 +141,7 @@
             this.sizeDataGridViewTextBoxColumn.FillWeight = 160F;
             this.sizeDataGridViewTextBoxColumn.HeaderText = "Размер";
             this.sizeDataGridViewTextBoxColumn.Name = "sizeDataGridViewTextBoxColumn";
+            this.sizeDataGridViewTextBoxColumn.ReadOnly = true;
             this.sizeDataGridViewTextBoxColumn.Width = 160;
             // 
             // computersDataGridViewTextBoxColumn
@@ -145,6 +149,7 @@
             this.computersDataGridViewTextBoxColumn.DataPropertyName = "Computers";
             this.computersDataGridViewTextBoxColumn.HeaderText = "Computers";
             this.computersDataGridViewTextBoxColumn.Name = "computersDataGridViewTextBoxColumn";
+            this.computersDataGridViewTextBoxColumn.ReadOnly = true;
             this.computersDataGridViewTextBoxColumn.Visible = false;
             // 
             // rAMBindingSource

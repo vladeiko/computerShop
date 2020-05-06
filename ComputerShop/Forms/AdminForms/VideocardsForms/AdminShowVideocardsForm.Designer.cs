@@ -114,6 +114,7 @@
             this.videocardsDataGrid.DataSource = this.videocardBindingSource;
             this.videocardsDataGrid.Location = new System.Drawing.Point(140, 78);
             this.videocardsDataGrid.Name = "videocardsDataGrid";
+            this.videocardsDataGrid.ReadOnly = true;
             this.videocardsDataGrid.RowHeadersVisible = false;
             this.videocardsDataGrid.Size = new System.Drawing.Size(574, 300);
             this.videocardsDataGrid.TabIndex = 13;
@@ -123,6 +124,7 @@
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
             this.idDataGridViewTextBoxColumn.HeaderText = "Id";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
             this.idDataGridViewTextBoxColumn.Visible = false;
             // 
             // nameDataGridViewTextBoxColumn
@@ -131,6 +133,7 @@
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
             this.nameDataGridViewTextBoxColumn.HeaderText = "Название";
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // videoMemoryDataGridViewTextBoxColumn
             // 
@@ -138,6 +141,7 @@
             this.videoMemoryDataGridViewTextBoxColumn.FillWeight = 160F;
             this.videoMemoryDataGridViewTextBoxColumn.HeaderText = "Видеопамять";
             this.videoMemoryDataGridViewTextBoxColumn.Name = "videoMemoryDataGridViewTextBoxColumn";
+            this.videoMemoryDataGridViewTextBoxColumn.ReadOnly = true;
             this.videoMemoryDataGridViewTextBoxColumn.Width = 160;
             // 
             // computersDataGridViewTextBoxColumn
@@ -145,6 +149,7 @@
             this.computersDataGridViewTextBoxColumn.DataPropertyName = "Computers";
             this.computersDataGridViewTextBoxColumn.HeaderText = "Computers";
             this.computersDataGridViewTextBoxColumn.Name = "computersDataGridViewTextBoxColumn";
+            this.computersDataGridViewTextBoxColumn.ReadOnly = true;
             this.computersDataGridViewTextBoxColumn.Visible = false;
             // 
             // videocardBindingSource

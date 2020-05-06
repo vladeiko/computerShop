@@ -116,6 +116,7 @@
             this.processorsDataGrid.DataSource = this.processorBindingSource;
             this.processorsDataGrid.Location = new System.Drawing.Point(140, 78);
             this.processorsDataGrid.Name = "processorsDataGrid";
+            this.processorsDataGrid.ReadOnly = true;
             this.processorsDataGrid.RowHeadersVisible = false;
             this.processorsDataGrid.Size = new System.Drawing.Size(574, 300);
             this.processorsDataGrid.TabIndex = 7;
@@ -125,6 +126,7 @@
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
             this.idDataGridViewTextBoxColumn.HeaderText = "Id";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
             this.idDataGridViewTextBoxColumn.Visible = false;
             // 
             // nameDataGridViewTextBoxColumn
@@ -133,6 +135,7 @@
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
             this.nameDataGridViewTextBoxColumn.HeaderText = "Название";
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // numOfCoresDataGridViewTextBoxColumn
             // 
@@ -140,6 +143,7 @@
             this.numOfCoresDataGridViewTextBoxColumn.FillWeight = 130F;
             this.numOfCoresDataGridViewTextBoxColumn.HeaderText = "Количество ядер";
             this.numOfCoresDataGridViewTextBoxColumn.Name = "numOfCoresDataGridViewTextBoxColumn";
+            this.numOfCoresDataGridViewTextBoxColumn.ReadOnly = true;
             this.numOfCoresDataGridViewTextBoxColumn.Width = 130;
             // 
             // clockFrequencyDataGridViewTextBoxColumn
@@ -148,6 +152,7 @@
             this.clockFrequencyDataGridViewTextBoxColumn.FillWeight = 130F;
             this.clockFrequencyDataGridViewTextBoxColumn.HeaderText = "Тактовая частота";
             this.clockFrequencyDataGridViewTextBoxColumn.Name = "clockFrequencyDataGridViewTextBoxColumn";
+            this.clockFrequencyDataGridViewTextBoxColumn.ReadOnly = true;
             this.clockFrequencyDataGridViewTextBoxColumn.Width = 130;
             // 
             // computersDataGridViewTextBoxColumn
@@ -155,6 +160,7 @@
             this.computersDataGridViewTextBoxColumn.DataPropertyName = "Computers";
             this.computersDataGridViewTextBoxColumn.HeaderText = "Computers";
             this.computersDataGridViewTextBoxColumn.Name = "computersDataGridViewTextBoxColumn";
+            this.computersDataGridViewTextBoxColumn.ReadOnly = true;
             this.computersDataGridViewTextBoxColumn.Visible = false;
             // 
             // processorBindingSource

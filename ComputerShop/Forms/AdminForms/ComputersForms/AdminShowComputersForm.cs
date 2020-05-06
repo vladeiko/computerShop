@@ -69,5 +69,11 @@ namespace ComputerShop
                 return;
             }
         }
+
+        private void addButton_Click(object sender, EventArgs e)
+        {
+            AdminAddComputerForm form = new AdminAddComputerForm();
+            form.ShowDialog();
+        }
     }
 }

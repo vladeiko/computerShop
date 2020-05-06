@@ -70,6 +70,7 @@
             this.usersDataGrid.DataSource = this.userBindingSource1;
             this.usersDataGrid.Location = new System.Drawing.Point(56, 60);
             this.usersDataGrid.Name = "usersDataGrid";
+            this.usersDataGrid.ReadOnly = true;
             this.usersDataGrid.RowHeadersVisible = false;
             this.usersDataGrid.Size = new System.Drawing.Size(743, 300);
             this.usersDataGrid.TabIndex = 1;
@@ -79,6 +80,7 @@
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
             this.idDataGridViewTextBoxColumn.HeaderText = "Id";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
             this.idDataGridViewTextBoxColumn.Visible = false;
             // 
             // loginDataGridViewTextBoxColumn
@@ -86,6 +88,7 @@
             this.loginDataGridViewTextBoxColumn.DataPropertyName = "Login";
             this.loginDataGridViewTextBoxColumn.HeaderText = "Логин";
             this.loginDataGridViewTextBoxColumn.Name = "loginDataGridViewTextBoxColumn";
+            this.loginDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // firstNameDataGridViewTextBoxColumn
             // 
@@ -93,6 +96,7 @@
             this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
             this.firstNameDataGridViewTextBoxColumn.HeaderText = "Имя";
             this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
+            this.firstNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // secondNameDataGridViewTextBoxColumn
             // 
@@ -100,12 +104,14 @@
             this.secondNameDataGridViewTextBoxColumn.DataPropertyName = "SecondName";
             this.secondNameDataGridViewTextBoxColumn.HeaderText = "Фамилия";
             this.secondNameDataGridViewTextBoxColumn.Name = "secondNameDataGridViewTextBoxColumn";
+            this.secondNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // passWordDataGridViewTextBoxColumn
             // 
             this.passWordDataGridViewTextBoxColumn.DataPropertyName = "PassWord";
             this.passWordDataGridViewTextBoxColumn.HeaderText = "PassWord";
             this.passWordDataGridViewTextBoxColumn.Name = "passWordDataGridViewTextBoxColumn";
+            this.passWordDataGridViewTextBoxColumn.ReadOnly = true;
             this.passWordDataGridViewTextBoxColumn.Visible = false;
             // 
             // phoneDataGridViewTextBoxColumn
@@ -114,6 +120,7 @@
             this.phoneDataGridViewTextBoxColumn.DataPropertyName = "Phone";
             this.phoneDataGridViewTextBoxColumn.HeaderText = "Телефон";
             this.phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
+            this.phoneDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // emailDataGridViewTextBoxColumn
             // 
@@ -121,18 +128,21 @@
             this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
             this.emailDataGridViewTextBoxColumn.HeaderText = "E-mail";
             this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // statusDataGridViewTextBoxColumn
             // 
             this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
             this.statusDataGridViewTextBoxColumn.HeaderText = "Статус";
             this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // imagePathDataGridViewTextBoxColumn
             // 
             this.imagePathDataGridViewTextBoxColumn.DataPropertyName = "ImagePath";
             this.imagePathDataGridViewTextBoxColumn.HeaderText = "ImagePath";
             this.imagePathDataGridViewTextBoxColumn.Name = "imagePathDataGridViewTextBoxColumn";
+            this.imagePathDataGridViewTextBoxColumn.ReadOnly = true;
             this.imagePathDataGridViewTextBoxColumn.Visible = false;
             // 
             // userBindingSource1

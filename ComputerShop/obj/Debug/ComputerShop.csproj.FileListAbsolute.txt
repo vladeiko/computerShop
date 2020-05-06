@@ -43,4 +43,4 @@ D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.AdminMo
 D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.AdminShowComputersForm.resources
 D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.Migrations.testComputers.resources
 D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.acceptDeleteComp.resources
-D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.Forms.AdminForms.ComputersForms.AdminAddComputerForm.resources
+D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.AdminAddComputerForm.resources
