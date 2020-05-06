@@ -72,6 +72,12 @@
     <Compile Include="Forms\AdminForms\ComputersForms\AdminAddComputerForm.Designer.cs">
       <DependentUpon>AdminAddComputerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\AdminForms\ComputersForms\AdminMoreComputerInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\ComputersForms\AdminMoreComputerInfoForm.Designer.cs">
+      <DependentUpon>AdminMoreComputerInfoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AdminForms\ComputersForms\AdminShowComputersForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +199,12 @@
     <Compile Include="Forms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\UserForms\UserMoreCompInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserForms\UserMoreCompInfoForm.Designer.cs">
+      <DependentUpon>UserMoreCompInfoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\202004291650118_InitialCreate.cs" />
     <Compile Include="Migrations\202004291650118_InitialCreate.designer.cs">
       <DependentUpon>202004291650118_InitialCreate.cs</DependentUpon>
@@ -242,11 +254,11 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DataBase\User.cs" />
-    <Compile Include="Forms\UserForms\UserForm1.cs">
+    <Compile Include="Forms\UserForms\UserStartForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\UserForms\UserForm1.Designer.cs">
-      <DependentUpon>UserForm1.cs</DependentUpon>
+    <Compile Include="Forms\UserForms\UserStartForm.Designer.cs">
+      <DependentUpon>UserStartForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\PasswordHasher.cs" />
     <EmbeddedResource Include="Forms\AdminForms\ComputersForms\acceptDeleteComp.resx">
@@ -254,6 +266,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminForms\ComputersForms\AdminAddComputerForm.resx">
       <DependentUpon>AdminAddComputerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\ComputersForms\AdminMoreComputerInfoForm.resx">
+      <DependentUpon>AdminMoreComputerInfoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminForms\ComputersForms\AdminShowComputersForm.resx">
       <DependentUpon>AdminShowComputersForm.cs</DependentUpon>
@@ -315,6 +330,9 @@
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserForms\UserMoreCompInfoForm.resx">
+      <DependentUpon>UserMoreCompInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004291650118_InitialCreate.resx">
       <DependentUpon>202004291650118_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
@@ -354,8 +372,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forms\UserForms\UserForm1.resx">
-      <DependentUpon>UserForm1.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\UserForms\UserStartForm.resx">
+      <DependentUpon>UserStartForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Computer.datasource" />

@@ -190,6 +190,7 @@
             // 
             // statusComboBox
             // 
+            this.statusComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.statusComboBox.Enabled = false;
             this.statusComboBox.FormattingEnabled = true;
             this.statusComboBox.ImeMode = System.Windows.Forms.ImeMode.Off;

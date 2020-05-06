@@ -48,7 +48,7 @@ namespace ComputerShop
                 {
                     CurrentUser.Set(authorising);
 
-                    UserForm1 form = new UserForm1();
+                    UserStartForm form = new UserStartForm();
                     form.Show();
                     Hide();
                 }

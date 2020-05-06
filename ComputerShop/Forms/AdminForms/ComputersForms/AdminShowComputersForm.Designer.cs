@@ -33,10 +33,10 @@
             this.goBackButton = new System.Windows.Forms.Button();
             this.computersDataGrid = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.deleteButton = new System.Windows.Forms.Button();
-            this.addButton = new System.Windows.Forms.Button();
             this.reloadButton = new System.Windows.Forms.Button();
             this.showMoreButton = new System.Windows.Forms.Button();
+            this.deleteButton = new System.Windows.Forms.Button();
+            this.addButton = new System.Windows.Forms.Button();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.manufacturerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.modelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -99,6 +99,28 @@
             this.pictureBox1.TabIndex = 26;
             this.pictureBox1.TabStop = false;
             // 
+            // reloadButton
+            // 
+            this.reloadButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.reloadButton.Location = new System.Drawing.Point(311, 412);
+            this.reloadButton.Name = "reloadButton";
+            this.reloadButton.Size = new System.Drawing.Size(92, 29);
+            this.reloadButton.TabIndex = 28;
+            this.reloadButton.Text = "Обновить";
+            this.reloadButton.UseVisualStyleBackColor = true;
+            this.reloadButton.Click += new System.EventHandler(this.reloadButton_Click);
+            // 
+            // showMoreButton
+            // 
+            this.showMoreButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.showMoreButton.Location = new System.Drawing.Point(12, 412);
+            this.showMoreButton.Name = "showMoreButton";
+            this.showMoreButton.Size = new System.Drawing.Size(92, 29);
+            this.showMoreButton.TabIndex = 27;
+            this.showMoreButton.Text = "Подробнее";
+            this.showMoreButton.UseVisualStyleBackColor = true;
+            this.showMoreButton.Click += new System.EventHandler(this.showMoreButton_Click);
+            // 
             // deleteButton
             // 
             this.deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -120,27 +142,6 @@
             this.addButton.Text = "Добавить";
             this.addButton.UseVisualStyleBackColor = true;
             this.addButton.Click += new System.EventHandler(this.addButton_Click);
-            // 
-            // reloadButton
-            // 
-            this.reloadButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.reloadButton.Location = new System.Drawing.Point(311, 412);
-            this.reloadButton.Name = "reloadButton";
-            this.reloadButton.Size = new System.Drawing.Size(92, 29);
-            this.reloadButton.TabIndex = 28;
-            this.reloadButton.Text = "Обновить";
-            this.reloadButton.UseVisualStyleBackColor = true;
-            this.reloadButton.Click += new System.EventHandler(this.reloadButton_Click);
-            // 
-            // showMoreButton
-            // 
-            this.showMoreButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.showMoreButton.Location = new System.Drawing.Point(12, 412);
-            this.showMoreButton.Name = "showMoreButton";
-            this.showMoreButton.Size = new System.Drawing.Size(92, 29);
-            this.showMoreButton.TabIndex = 27;
-            this.showMoreButton.Text = "Подробнее";
-            this.showMoreButton.UseVisualStyleBackColor = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -271,9 +272,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn videocardDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rAMDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button deleteButton;
-        private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Button reloadButton;
         private System.Windows.Forms.Button showMoreButton;
+        private System.Windows.Forms.Button deleteButton;
+        private System.Windows.Forms.Button addButton;
     }
 }

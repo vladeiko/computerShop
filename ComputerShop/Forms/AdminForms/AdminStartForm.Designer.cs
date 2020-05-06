@@ -57,7 +57,7 @@
             this.goBackButton.Name = "goBackButton";
             this.goBackButton.Size = new System.Drawing.Size(75, 27);
             this.goBackButton.TabIndex = 1;
-            this.goBackButton.Text = "НАЗАД";
+            this.goBackButton.Text = "ВЫХОД";
             this.goBackButton.UseVisualStyleBackColor = true;
             this.goBackButton.Click += new System.EventHandler(this.goBackButton_Click);
             // 

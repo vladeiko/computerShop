@@ -75,5 +75,23 @@ namespace ComputerShop
             AdminAddComputerForm form = new AdminAddComputerForm();
             form.ShowDialog();
         }
+
+        private void showMoreButton_Click(object sender, EventArgs e)
+        {
+            int id;
+
+            try
+            {
+                id = Convert.ToInt32(computersDataGrid.CurrentRow.Cells[0].Value.ToString());
+                AdminMoreComputerInfoForm form = new AdminMoreComputerInfoForm(id);
+                form.ShowDialog();
+            }
+            catch
+            {
+                // TODO:
+                // Add error (select string)
+                return;
+            }
+        }
     }
 }

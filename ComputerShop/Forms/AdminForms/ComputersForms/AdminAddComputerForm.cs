@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Data.Entity;
 using System.Linq;
@@ -16,6 +15,11 @@ namespace ComputerShop
 
             using(var db = new MyDbContext())
             {
+                db.Computers.Load();
+                db.Processors.Load();
+                db.Videocards.Load();
+                db.RAMs.Load();
+
                 processorComboBox.DataSource = db.Processors.ToList();
 
                 videocardComboBox.DataSource = db.Videocards.ToList();
@@ -35,6 +39,11 @@ namespace ComputerShop
         {
             using(var db = new MyDbContext())
             {
+                db.Computers.Load();
+                db.Processors.Load();
+                db.Videocards.Load();
+                db.RAMs.Load();
+
                 Computer newComputer = new Computer()
                 {
                     Manufacturer = manufacturerTextBox.Text,
@@ -42,7 +51,8 @@ namespace ComputerShop
                     ProcessorId = ((Processor)processorComboBox.SelectedItem).Id,
                     VideocardId = ((Videocard)videocardComboBox.SelectedItem).Id,
                     RAMId = ((RAM)ramComboBox.SelectedItem).Id,
-                    Price = (float)priceUpDown.Value
+                    Price = (float)priceUpDown.Value,
+                    ImagePath = imagePictureBox.ImageLocation
                 };
 
                 db.Computers.Add(newComputer);

@@ -111,6 +111,7 @@
             // 
             // processorComboBox
             // 
+            this.processorComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.processorComboBox.FormattingEnabled = true;
             this.processorComboBox.Location = new System.Drawing.Point(443, 74);
             this.processorComboBox.Name = "processorComboBox";
@@ -150,6 +151,7 @@
             // 
             // videocardComboBox
             // 
+            this.videocardComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.videocardComboBox.FormattingEnabled = true;
             this.videocardComboBox.Location = new System.Drawing.Point(443, 106);
             this.videocardComboBox.Name = "videocardComboBox";
@@ -168,6 +170,7 @@
             // 
             // ramComboBox
             // 
+            this.ramComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ramComboBox.FormattingEnabled = true;
             this.ramComboBox.Location = new System.Drawing.Point(443, 138);
             this.ramComboBox.Name = "ramComboBox";
