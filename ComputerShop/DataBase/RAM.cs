@@ -13,5 +13,10 @@ namespace ComputerShop
         public int Size { get; set; }
 
         public virtual ICollection<Computer> Computers { get; set; }
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

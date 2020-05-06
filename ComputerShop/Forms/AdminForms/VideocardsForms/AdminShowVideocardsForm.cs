@@ -1,40 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Entity;
 
 namespace ComputerShop
 {
     public partial class AdminShowVideocardsForm : Form
     {
-        private List<string[]> data = new List<string[]>();
-
         public AdminShowVideocardsForm()
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
 
-            using (var db = new MyDbContext())
+            using(var db = new MyDbContext())
             {
-                foreach (var v in db.Videocards)
-                {
-                    data.Add(new string[] {
-                        v.Id.ToString(),
-                        v.Name,
-                        v.VideoMemory.ToString(),                        
-                    });
-                }
+                db.Videocards.Load();
+
+                videocardsDataGrid.DataSource = db.Videocards.Local.ToBindingList();
             }
-
-            foreach (string[] str in data)
-                videocardsDataGrid.Rows.Add(str);
-
-            return;
         }
 
         private void AdminShowVideocardsForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -51,25 +33,14 @@ namespace ComputerShop
 
         private void reloadButton_Click(object sender, EventArgs e)
         {
-            data.Clear();
-            videocardsDataGrid.Rows.Clear();
-
-            using (var db = new MyDbContext())
+            using(var db = new MyDbContext())
             {
-                foreach (var v in db.Videocards)
-                {
-                    data.Add(new string[] {
-                        v.Id.ToString(),
-                        v.Name,
-                        v.VideoMemory.ToString(),
-                    });
-                }
+                db.Videocards.Load();
+
+                videocardsDataGrid.SelectAll();
+                videocardsDataGrid.ClearSelection();
+                videocardsDataGrid.DataSource = db.Videocards.Local.ToBindingList();
             }
-
-            foreach (string[] str in data)
-                videocardsDataGrid.Rows.Add(str);
-
-            return;
         }
 
         private void showMoreButton_Click(object sender, EventArgs e)

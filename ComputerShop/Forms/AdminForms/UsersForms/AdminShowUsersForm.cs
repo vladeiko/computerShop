@@ -1,19 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Entity;
 
 namespace ComputerShop
 {
     public partial class AdminShowUsersForm : Form
     {
-        private List<string[]> data = new List<string[]>();
-
         public AdminShowUsersForm()
         {
             InitializeComponent();
@@ -21,22 +13,10 @@ namespace ComputerShop
 
             using (var db = new MyDbContext())
             {
-                foreach(var u in db.Users)
-                {
-                    data.Add(new string[] { 
-                        u.Id.ToString(),
-                        u.Login,
-                        u.FirstName, 
-                        u.SecondName, 
-                        u.Email, 
-                        u.Phone,
-                        u.Status
-                    });
-                }
+                db.Users.Load();
+
+                usersDataGrid.DataSource = db.Users.Local.ToBindingList();
             }
-            
-            foreach(string[] str in data)            
-                usersDataGrid.Rows.Add(str);
 
             return;
         }
@@ -75,28 +55,14 @@ namespace ComputerShop
 
         private void reloadButton_Click(object sender, EventArgs e)
         {
-            data.Clear();
-            usersDataGrid.Rows.Clear();
-
             using (var db = new MyDbContext())
             {
-                foreach (var u in db.Users)
-                {
-                    data.Add(new string[] {
-                        u.Id.ToString(),
-                        u.Login,
-                        u.FirstName,
-                        u.SecondName,
-                        u.Email,
-                        u.Phone,
-                        u.Status
-                    });
-                }
+                db.Users.Load();
+
+                usersDataGrid.SelectAll();
+                usersDataGrid.ClearSelection();
+                usersDataGrid.DataSource = db.Users.Local.ToBindingList();
             }
-
-            foreach (string[] str in data)
-                usersDataGrid.Rows.Add(str);
-
             return;
         }
 

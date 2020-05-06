@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminShowRAMsForm));
             this.deleteButton = new System.Windows.Forms.Button();
             this.addRamButton = new System.Windows.Forms.Button();
@@ -35,12 +36,15 @@
             this.showMoreButton = new System.Windows.Forms.Button();
             this.goBackButton = new System.Windows.Forms.Button();
             this.ramDataGrid = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.videocardName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ramMemory = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.rAMBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sizeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.computersDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ramDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rAMBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // deleteButton
@@ -100,38 +104,19 @@
             // 
             // ramDataGrid
             // 
+            this.ramDataGrid.AutoGenerateColumns = false;
             this.ramDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ramDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
-            this.videocardName,
-            this.ramMemory});
+            this.idDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn,
+            this.sizeDataGridViewTextBoxColumn,
+            this.computersDataGridViewTextBoxColumn});
+            this.ramDataGrid.DataSource = this.rAMBindingSource;
             this.ramDataGrid.Location = new System.Drawing.Point(140, 78);
             this.ramDataGrid.Name = "ramDataGrid";
             this.ramDataGrid.RowHeadersVisible = false;
             this.ramDataGrid.Size = new System.Drawing.Size(574, 300);
             this.ramDataGrid.TabIndex = 19;
-            // 
-            // id
-            // 
-            this.id.HeaderText = "id";
-            this.id.Name = "id";
-            this.id.Visible = false;
-            // 
-            // videocardName
-            // 
-            this.videocardName.FillWeight = 400F;
-            this.videocardName.HeaderText = "Название";
-            this.videocardName.Name = "videocardName";
-            this.videocardName.ReadOnly = true;
-            this.videocardName.Width = 400;
-            // 
-            // ramMemory
-            // 
-            this.ramMemory.FillWeight = 160F;
-            this.ramMemory.HeaderText = "Размер";
-            this.ramMemory.Name = "ramMemory";
-            this.ramMemory.ReadOnly = true;
-            this.ramMemory.Width = 160;
             // 
             // pictureBox1
             // 
@@ -142,6 +127,39 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 25;
             this.pictureBox1.TabStop = false;
+            // 
+            // rAMBindingSource
+            // 
+            this.rAMBindingSource.DataSource = typeof(ComputerShop.RAM);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Название";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // sizeDataGridViewTextBoxColumn
+            // 
+            this.sizeDataGridViewTextBoxColumn.DataPropertyName = "Size";
+            this.sizeDataGridViewTextBoxColumn.FillWeight = 160F;
+            this.sizeDataGridViewTextBoxColumn.HeaderText = "Размер";
+            this.sizeDataGridViewTextBoxColumn.Name = "sizeDataGridViewTextBoxColumn";
+            this.sizeDataGridViewTextBoxColumn.Width = 160;
+            // 
+            // computersDataGridViewTextBoxColumn
+            // 
+            this.computersDataGridViewTextBoxColumn.DataPropertyName = "Computers";
+            this.computersDataGridViewTextBoxColumn.HeaderText = "Computers";
+            this.computersDataGridViewTextBoxColumn.Name = "computersDataGridViewTextBoxColumn";
+            this.computersDataGridViewTextBoxColumn.Visible = false;
             // 
             // AdminShowRAMsForm
             // 
@@ -161,6 +179,7 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdminShowRAMsForm_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.ramDataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rAMBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -173,9 +192,11 @@
         private System.Windows.Forms.Button showMoreButton;
         private System.Windows.Forms.Button goBackButton;
         private System.Windows.Forms.DataGridView ramDataGrid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn videocardName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ramMemory;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sizeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn computersDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource rAMBindingSource;
     }
 }

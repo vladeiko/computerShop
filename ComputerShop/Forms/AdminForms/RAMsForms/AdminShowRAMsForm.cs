@@ -1,38 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Entity;
 
 namespace ComputerShop
 {
     public partial class AdminShowRAMsForm : Form
     {
-        private List<string[]> data = new List<string[]>();
-
         public AdminShowRAMsForm()
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
 
-            using(var db = new MyDbContext())
+            using (var db = new MyDbContext())
             {
-                foreach (var r in db.RAMs)
-                {
-                    data.Add(new string[] {
-                        r.Id.ToString(),
-                        r.Name,
-                        r.Size.ToString(),
-                    });
-                }
-            }
+                db.RAMs.Load();
 
-            foreach (string[] str in data)
-                ramDataGrid.Rows.Add(str);
+                ramDataGrid.DataSource = db.RAMs.Local.ToBindingList();
+            }
 
             return;
         }
@@ -51,23 +35,14 @@ namespace ComputerShop
 
         private void reloadButton_Click(object sender, EventArgs e)
         {
-            data.Clear();
-            ramDataGrid.Rows.Clear();
-
             using (var db = new MyDbContext())
             {
-                foreach (var r in db.RAMs)
-                {
-                    data.Add(new string[] {
-                        r.Id.ToString(),
-                        r.Name,
-                        r.Size.ToString(),
-                    });
-                }
-            }
+                db.RAMs.Load();
 
-            foreach (string[] str in data)
-                ramDataGrid.Rows.Add(str);
+                ramDataGrid.SelectAll();
+                ramDataGrid.ClearSelection();
+                ramDataGrid.DataSource = db.RAMs.Local.ToBindingList();
+            }
 
             return;
         }

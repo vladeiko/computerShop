@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminShowCPUsForm));
             this.deleteButton = new System.Windows.Forms.Button();
             this.addProcessorButton = new System.Windows.Forms.Button();
@@ -35,13 +36,16 @@
             this.showMoreButton = new System.Windows.Forms.Button();
             this.goBackButton = new System.Windows.Forms.Button();
             this.processorsDataGrid = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.procName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NumOfCores = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ClockFrequency = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.processorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numOfCoresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clockFrequencyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.computersDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.processorsDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.processorBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // deleteButton
@@ -101,46 +105,20 @@
             // 
             // processorsDataGrid
             // 
+            this.processorsDataGrid.AutoGenerateColumns = false;
             this.processorsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.processorsDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
-            this.procName,
-            this.NumOfCores,
-            this.ClockFrequency});
+            this.idDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn,
+            this.numOfCoresDataGridViewTextBoxColumn,
+            this.clockFrequencyDataGridViewTextBoxColumn,
+            this.computersDataGridViewTextBoxColumn});
+            this.processorsDataGrid.DataSource = this.processorBindingSource;
             this.processorsDataGrid.Location = new System.Drawing.Point(140, 78);
             this.processorsDataGrid.Name = "processorsDataGrid";
             this.processorsDataGrid.RowHeadersVisible = false;
             this.processorsDataGrid.Size = new System.Drawing.Size(574, 300);
             this.processorsDataGrid.TabIndex = 7;
-            // 
-            // id
-            // 
-            this.id.HeaderText = "id";
-            this.id.Name = "id";
-            this.id.Visible = false;
-            // 
-            // procName
-            // 
-            this.procName.FillWeight = 250F;
-            this.procName.HeaderText = "Название";
-            this.procName.Name = "procName";
-            this.procName.ReadOnly = true;
-            this.procName.Width = 250;
-            // 
-            // NumOfCores
-            // 
-            this.NumOfCores.FillWeight = 160F;
-            this.NumOfCores.HeaderText = "Количество ядер";
-            this.NumOfCores.Name = "NumOfCores";
-            this.NumOfCores.ReadOnly = true;
-            this.NumOfCores.Width = 160;
-            // 
-            // ClockFrequency
-            // 
-            this.ClockFrequency.FillWeight = 160F;
-            this.ClockFrequency.HeaderText = "Тактовая частота";
-            this.ClockFrequency.Name = "ClockFrequency";
-            this.ClockFrequency.Width = 160;
             // 
             // pictureBox1
             // 
@@ -151,6 +129,47 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
+            // 
+            // processorBindingSource
+            // 
+            this.processorBindingSource.DataSource = typeof(ComputerShop.Processor);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Название";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // numOfCoresDataGridViewTextBoxColumn
+            // 
+            this.numOfCoresDataGridViewTextBoxColumn.DataPropertyName = "NumOfCores";
+            this.numOfCoresDataGridViewTextBoxColumn.FillWeight = 130F;
+            this.numOfCoresDataGridViewTextBoxColumn.HeaderText = "Количество ядер";
+            this.numOfCoresDataGridViewTextBoxColumn.Name = "numOfCoresDataGridViewTextBoxColumn";
+            this.numOfCoresDataGridViewTextBoxColumn.Width = 130;
+            // 
+            // clockFrequencyDataGridViewTextBoxColumn
+            // 
+            this.clockFrequencyDataGridViewTextBoxColumn.DataPropertyName = "ClockFrequency";
+            this.clockFrequencyDataGridViewTextBoxColumn.FillWeight = 130F;
+            this.clockFrequencyDataGridViewTextBoxColumn.HeaderText = "Тактовая частота";
+            this.clockFrequencyDataGridViewTextBoxColumn.Name = "clockFrequencyDataGridViewTextBoxColumn";
+            this.clockFrequencyDataGridViewTextBoxColumn.Width = 130;
+            // 
+            // computersDataGridViewTextBoxColumn
+            // 
+            this.computersDataGridViewTextBoxColumn.DataPropertyName = "Computers";
+            this.computersDataGridViewTextBoxColumn.HeaderText = "Computers";
+            this.computersDataGridViewTextBoxColumn.Name = "computersDataGridViewTextBoxColumn";
+            this.computersDataGridViewTextBoxColumn.Visible = false;
             // 
             // AdminShowCPUsForm
             // 
@@ -170,6 +189,7 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdminShowCPUsForm_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.processorsDataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.processorBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -182,10 +202,12 @@
         private System.Windows.Forms.Button showMoreButton;
         private System.Windows.Forms.Button goBackButton;
         private System.Windows.Forms.DataGridView processorsDataGrid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn procName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NumOfCores;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ClockFrequency;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numOfCoresDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clockFrequencyDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn computersDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource processorBindingSource;
     }
 }

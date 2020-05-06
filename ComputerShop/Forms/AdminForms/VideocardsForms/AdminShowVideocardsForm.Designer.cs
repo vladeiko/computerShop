@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminShowVideocardsForm));
             this.deleteButton = new System.Windows.Forms.Button();
             this.addVideocardButton = new System.Windows.Forms.Button();
@@ -35,12 +36,15 @@
             this.showMoreButton = new System.Windows.Forms.Button();
             this.goBackButton = new System.Windows.Forms.Button();
             this.videocardsDataGrid = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.videocardName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.videoMemory = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.videocardBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.videoMemoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.computersDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.videocardsDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.videocardBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // deleteButton
@@ -100,38 +104,19 @@
             // 
             // videocardsDataGrid
             // 
+            this.videocardsDataGrid.AutoGenerateColumns = false;
             this.videocardsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.videocardsDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
-            this.videocardName,
-            this.videoMemory});
+            this.idDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn,
+            this.videoMemoryDataGridViewTextBoxColumn,
+            this.computersDataGridViewTextBoxColumn});
+            this.videocardsDataGrid.DataSource = this.videocardBindingSource;
             this.videocardsDataGrid.Location = new System.Drawing.Point(140, 78);
             this.videocardsDataGrid.Name = "videocardsDataGrid";
             this.videocardsDataGrid.RowHeadersVisible = false;
             this.videocardsDataGrid.Size = new System.Drawing.Size(574, 300);
             this.videocardsDataGrid.TabIndex = 13;
-            // 
-            // id
-            // 
-            this.id.HeaderText = "id";
-            this.id.Name = "id";
-            this.id.Visible = false;
-            // 
-            // videocardName
-            // 
-            this.videocardName.FillWeight = 400F;
-            this.videocardName.HeaderText = "Название";
-            this.videocardName.Name = "videocardName";
-            this.videocardName.ReadOnly = true;
-            this.videocardName.Width = 400;
-            // 
-            // videoMemory
-            // 
-            this.videoMemory.FillWeight = 160F;
-            this.videoMemory.HeaderText = "Видеопамять";
-            this.videoMemory.Name = "videoMemory";
-            this.videoMemory.ReadOnly = true;
-            this.videoMemory.Width = 160;
             // 
             // pictureBox1
             // 
@@ -142,6 +127,39 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
+            // 
+            // videocardBindingSource
+            // 
+            this.videocardBindingSource.DataSource = typeof(ComputerShop.Videocard);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Название";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // videoMemoryDataGridViewTextBoxColumn
+            // 
+            this.videoMemoryDataGridViewTextBoxColumn.DataPropertyName = "VideoMemory";
+            this.videoMemoryDataGridViewTextBoxColumn.FillWeight = 160F;
+            this.videoMemoryDataGridViewTextBoxColumn.HeaderText = "Видеопамять";
+            this.videoMemoryDataGridViewTextBoxColumn.Name = "videoMemoryDataGridViewTextBoxColumn";
+            this.videoMemoryDataGridViewTextBoxColumn.Width = 160;
+            // 
+            // computersDataGridViewTextBoxColumn
+            // 
+            this.computersDataGridViewTextBoxColumn.DataPropertyName = "Computers";
+            this.computersDataGridViewTextBoxColumn.HeaderText = "Computers";
+            this.computersDataGridViewTextBoxColumn.Name = "computersDataGridViewTextBoxColumn";
+            this.computersDataGridViewTextBoxColumn.Visible = false;
             // 
             // AdminShowVideocardsForm
             // 
@@ -161,6 +179,7 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdminShowVideocardsForm_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.videocardsDataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.videocardBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -173,9 +192,11 @@
         private System.Windows.Forms.Button showMoreButton;
         private System.Windows.Forms.Button goBackButton;
         private System.Windows.Forms.DataGridView videocardsDataGrid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn videocardName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn videoMemory;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn videoMemoryDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn computersDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource videocardBindingSource;
     }
 }

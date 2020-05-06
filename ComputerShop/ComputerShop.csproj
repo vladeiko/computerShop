@@ -340,7 +340,11 @@
       <DependentUpon>UserForm1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Computer.datasource" />
+    <None Include="Properties\DataSources\Processor.datasource" />
+    <None Include="Properties\DataSources\RAM.datasource" />
     <None Include="Properties\DataSources\User.datasource" />
+    <None Include="Properties\DataSources\Videocard.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -1,19 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Entity;
 
 namespace ComputerShop
 {
     public partial class AdminShowCPUsForm : Form
     {
-        private List<string[]> data = new List<string[]>();
-
         public AdminShowCPUsForm()
         {
             InitializeComponent();
@@ -21,19 +13,10 @@ namespace ComputerShop
 
             using (var db = new MyDbContext())
             {
-                foreach (var p in db.Processors)
-                {
-                    data.Add(new string[] {
-                        p.Id.ToString(),
-                        p.Name,
-                        p.NumOfCores.ToString(),
-                        p.ClockFrequency.ToString(),
-                    });
-                }
-            }
+                db.Processors.Load();
 
-            foreach (string[] str in data)
-                processorsDataGrid.Rows.Add(str);
+                processorsDataGrid.DataSource = db.Processors.Local.ToBindingList();
+            }
 
             return;
         }
@@ -79,24 +62,14 @@ namespace ComputerShop
 
         private void reloadButton_Click(object sender, EventArgs e)
         {
-            data.Clear();
-            processorsDataGrid.Rows.Clear();
-
             using (var db = new MyDbContext())
             {
-                foreach (var p in db.Processors)
-                {
-                    data.Add(new string[] {
-                        p.Id.ToString(),
-                        p.Name,
-                        p.NumOfCores.ToString(),
-                        p.ClockFrequency.ToString(),
-                    });
-                }
-            }
+                db.Processors.Load();
 
-            foreach (string[] str in data)
-                processorsDataGrid.Rows.Add(str);
+                processorsDataGrid.SelectAll();
+                processorsDataGrid.ClearSelection();
+                processorsDataGrid.DataSource = db.Processors.Local.ToBindingList();
+            }
 
             return;
         }

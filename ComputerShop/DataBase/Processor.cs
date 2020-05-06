@@ -14,5 +14,10 @@ namespace ComputerShop
         public int ClockFrequency { get; set; }
 
         public virtual ICollection<Computer> Computers { get; set; }
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }
