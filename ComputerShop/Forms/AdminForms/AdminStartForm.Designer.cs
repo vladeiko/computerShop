@@ -44,7 +44,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.toDayTextBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // showUsersButton
@@ -72,7 +74,7 @@
             // showComputersButton
             // 
             this.showComputersButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.showComputersButton.Location = new System.Drawing.Point(125, 48);
+            this.showComputersButton.Location = new System.Drawing.Point(22, 35);
             this.showComputersButton.Name = "showComputersButton";
             this.showComputersButton.Size = new System.Drawing.Size(148, 63);
             this.showComputersButton.TabIndex = 2;
@@ -83,7 +85,7 @@
             // showProcessorsButton
             // 
             this.showProcessorsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.showProcessorsButton.Location = new System.Drawing.Point(125, 159);
+            this.showProcessorsButton.Location = new System.Drawing.Point(22, 126);
             this.showProcessorsButton.Name = "showProcessorsButton";
             this.showProcessorsButton.Size = new System.Drawing.Size(148, 63);
             this.showProcessorsButton.TabIndex = 3;
@@ -94,7 +96,7 @@
             // showVideocardsButton
             // 
             this.showVideocardsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.showVideocardsButton.Location = new System.Drawing.Point(125, 270);
+            this.showVideocardsButton.Location = new System.Drawing.Point(22, 219);
             this.showVideocardsButton.Name = "showVideocardsButton";
             this.showVideocardsButton.Size = new System.Drawing.Size(148, 63);
             this.showVideocardsButton.TabIndex = 4;
@@ -105,7 +107,7 @@
             // showRAMsButton
             // 
             this.showRAMsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.showRAMsButton.Location = new System.Drawing.Point(125, 376);
+            this.showRAMsButton.Location = new System.Drawing.Point(22, 318);
             this.showRAMsButton.Name = "showRAMsButton";
             this.showRAMsButton.Size = new System.Drawing.Size(148, 63);
             this.showRAMsButton.TabIndex = 5;
@@ -197,11 +199,24 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.showComputersButton);
+            this.groupBox1.Controls.Add(this.showProcessorsButton);
+            this.groupBox1.Controls.Add(this.showVideocardsButton);
+            this.groupBox1.Controls.Add(this.showRAMsButton);
+            this.groupBox1.Location = new System.Drawing.Point(103, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(190, 413);
+            this.groupBox1.TabIndex = 58;
+            this.groupBox1.TabStop = false;
+            // 
             // AdminStartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(854, 451);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.toDayTextBox);
             this.Controls.Add(this.label2);
@@ -211,10 +226,6 @@
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.showRAMsButton);
-            this.Controls.Add(this.showVideocardsButton);
-            this.Controls.Add(this.showProcessorsButton);
-            this.Controls.Add(this.showComputersButton);
             this.Controls.Add(this.goBackButton);
             this.Controls.Add(this.showUsersButton);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -222,6 +233,7 @@
             this.Text = "\"Premium PC\". Администратор. Начало";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdminStartForm_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,5 +256,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox toDayTextBox;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
