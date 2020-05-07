@@ -48,6 +48,12 @@
             this.avatarPictureBox = new System.Windows.Forms.PictureBox();
             this.addPictureButton = new System.Windows.Forms.Button();
             this.PhoneTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.loginErrorLabel = new System.Windows.Forms.Label();
+            this.nameErrorLabel = new System.Windows.Forms.Label();
+            this.secnameErrorLabel = new System.Windows.Forms.Label();
+            this.passwordErrorLabel = new System.Windows.Forms.Label();
+            this.emailErrorLabel = new System.Windows.Forms.Label();
+            this.phoneErrorLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.avatarPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -188,7 +194,7 @@
             // avatarPictureBox
             // 
             this.avatarPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("avatarPictureBox.Image")));
-            this.avatarPictureBox.Location = new System.Drawing.Point(372, 78);
+            this.avatarPictureBox.Location = new System.Drawing.Point(428, 70);
             this.avatarPictureBox.Name = "avatarPictureBox";
             this.avatarPictureBox.Size = new System.Drawing.Size(235, 235);
             this.avatarPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -198,7 +204,7 @@
             // addPictureButton
             // 
             this.addPictureButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addPictureButton.Location = new System.Drawing.Point(441, 337);
+            this.addPictureButton.Location = new System.Drawing.Point(497, 329);
             this.addPictureButton.Margin = new System.Windows.Forms.Padding(2);
             this.addPictureButton.Name = "addPictureButton";
             this.addPictureButton.Size = new System.Drawing.Size(104, 49);
@@ -210,16 +216,88 @@
             // PhoneTextBox
             // 
             this.PhoneTextBox.Location = new System.Drawing.Point(97, 285);
-            this.PhoneTextBox.Mask = "8-(999)-000-000";
+            this.PhoneTextBox.Mask = "8-(999)-000-00-00";
             this.PhoneTextBox.Name = "PhoneTextBox";
             this.PhoneTextBox.Size = new System.Drawing.Size(226, 20);
             this.PhoneTextBox.TabIndex = 17;
+            // 
+            // loginErrorLabel
+            // 
+            this.loginErrorLabel.AutoSize = true;
+            this.loginErrorLabel.ForeColor = System.Drawing.Color.Red;
+            this.loginErrorLabel.Location = new System.Drawing.Point(329, 103);
+            this.loginErrorLabel.Name = "loginErrorLabel";
+            this.loginErrorLabel.Size = new System.Drawing.Size(80, 13);
+            this.loginErrorLabel.TabIndex = 18;
+            this.loginErrorLabel.Text = "Ошибка ввода";
+            this.loginErrorLabel.Visible = false;
+            // 
+            // nameErrorLabel
+            // 
+            this.nameErrorLabel.AutoSize = true;
+            this.nameErrorLabel.ForeColor = System.Drawing.Color.Red;
+            this.nameErrorLabel.Location = new System.Drawing.Point(329, 139);
+            this.nameErrorLabel.Name = "nameErrorLabel";
+            this.nameErrorLabel.Size = new System.Drawing.Size(80, 13);
+            this.nameErrorLabel.TabIndex = 19;
+            this.nameErrorLabel.Text = "Ошибка ввода";
+            this.nameErrorLabel.Visible = false;
+            // 
+            // secnameErrorLabel
+            // 
+            this.secnameErrorLabel.AutoSize = true;
+            this.secnameErrorLabel.ForeColor = System.Drawing.Color.Red;
+            this.secnameErrorLabel.Location = new System.Drawing.Point(329, 174);
+            this.secnameErrorLabel.Name = "secnameErrorLabel";
+            this.secnameErrorLabel.Size = new System.Drawing.Size(80, 13);
+            this.secnameErrorLabel.TabIndex = 20;
+            this.secnameErrorLabel.Text = "Ошибка ввода";
+            this.secnameErrorLabel.Visible = false;
+            // 
+            // passwordErrorLabel
+            // 
+            this.passwordErrorLabel.AutoSize = true;
+            this.passwordErrorLabel.ForeColor = System.Drawing.Color.Red;
+            this.passwordErrorLabel.Location = new System.Drawing.Point(329, 212);
+            this.passwordErrorLabel.Name = "passwordErrorLabel";
+            this.passwordErrorLabel.Size = new System.Drawing.Size(80, 13);
+            this.passwordErrorLabel.TabIndex = 21;
+            this.passwordErrorLabel.Text = "Ошибка ввода";
+            this.passwordErrorLabel.Visible = false;
+            // 
+            // emailErrorLabel
+            // 
+            this.emailErrorLabel.AutoSize = true;
+            this.emailErrorLabel.ForeColor = System.Drawing.Color.Red;
+            this.emailErrorLabel.Location = new System.Drawing.Point(329, 252);
+            this.emailErrorLabel.Name = "emailErrorLabel";
+            this.emailErrorLabel.Size = new System.Drawing.Size(80, 13);
+            this.emailErrorLabel.TabIndex = 22;
+            this.emailErrorLabel.Text = "Ошибка ввода";
+            this.emailErrorLabel.Visible = false;
+            // 
+            // phoneErrorLabel
+            // 
+            this.phoneErrorLabel.AutoSize = true;
+            this.phoneErrorLabel.ForeColor = System.Drawing.Color.Red;
+            this.phoneErrorLabel.Location = new System.Drawing.Point(329, 289);
+            this.phoneErrorLabel.Name = "phoneErrorLabel";
+            this.phoneErrorLabel.Size = new System.Drawing.Size(80, 13);
+            this.phoneErrorLabel.TabIndex = 23;
+            this.phoneErrorLabel.Text = "Ошибка ввода";
+            this.phoneErrorLabel.Visible = false;
             // 
             // RegistrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(644, 421);
+            this.ClientSize = new System.Drawing.Size(685, 421);
+            this.Controls.Add(this.phoneErrorLabel);
+            this.Controls.Add(this.emailErrorLabel);
+            this.Controls.Add(this.passwordErrorLabel);
+            this.Controls.Add(this.secnameErrorLabel);
+            this.Controls.Add(this.nameErrorLabel);
+            this.Controls.Add(this.loginErrorLabel);
             this.Controls.Add(this.PhoneTextBox);
             this.Controls.Add(this.addPictureButton);
             this.Controls.Add(this.avatarPictureBox);
@@ -268,5 +346,11 @@
         private System.Windows.Forms.PictureBox avatarPictureBox;
         private System.Windows.Forms.Button addPictureButton;
         private System.Windows.Forms.MaskedTextBox PhoneTextBox;
+        private System.Windows.Forms.Label loginErrorLabel;
+        private System.Windows.Forms.Label nameErrorLabel;
+        private System.Windows.Forms.Label secnameErrorLabel;
+        private System.Windows.Forms.Label passwordErrorLabel;
+        private System.Windows.Forms.Label emailErrorLabel;
+        private System.Windows.Forms.Label phoneErrorLabel;
     }
 }

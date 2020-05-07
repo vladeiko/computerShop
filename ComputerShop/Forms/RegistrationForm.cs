@@ -21,6 +21,13 @@ namespace ComputerShop
 
         private void bSignUp_Click(object sender, EventArgs e)
         {
+            loginErrorLabel.Visible = false;
+            nameErrorLabel.Visible = false;
+            secnameErrorLabel.Visible = false;
+            passwordErrorLabel.Visible = false;
+            emailErrorLabel.Visible = false;
+            phoneErrorLabel.Visible = false;
+
             using (var db = new MyDbContext())
             {
                 string login = LoginTextBox.Text;
@@ -31,57 +38,60 @@ namespace ComputerShop
                 string phone = PhoneTextBox.Text;
                 string imgPath = avatarPictureBox.ImageLocation;
 
+                bool allowReg = true;
+
                 if (avatarPictureBox.ImageLocation == "")
                 {
                     imgPath = "D:\\Univer\\4sem\\practice\\computerShop\\ComputerShop\\img\\noAvatar.png";
                 }
 
                 // Error processing. Incorrectly entered data
-                if (login == "")
+                Regex regexLogin = new Regex(".{3,}");  
+                if (!regexLogin.IsMatch(login))
                 {
-                    LoginTextBox.ForeColor = System.Drawing.Color.Red;
-                    LoginTextBox.Text = "Неправильно введён логин";
-
-                    Thread.Sleep(20);
-
-                    LoginTextBox.ForeColor = System.Drawing.Color.Black;
-                    LoginTextBox.Text = "";
+                    loginErrorLabel.Visible = true;
 
                     return;
                 }
 
-                if (firstName == "")
+                Regex regexFN = new Regex(".[А-я]");
+                if (!regexFN.IsMatch(firstName))
                 {
-                    // TODO:
-                    // Add empty firstName
+                    nameErrorLabel.Visible = true;
+
                     return;
                 }
 
-                if (secondName == "")
+                Regex regexSN = new Regex(".[А-я]");
+                if (!regexSN.IsMatch(secondName))
                 {
-                    // TODO:
-                    // Add empty secondName
+                    secnameErrorLabel.Visible = true;
+
                     return;
                 }
 
-                if (passWord == "")
+                Regex regexPassword = new Regex(".{10,}");
+                if (!regexPassword.IsMatch(passWord))
                 {
-                    // TODO:
-                    // Add empty passWord
+                    passwordErrorLabel.Visible = true;
+
                     return;
                 }
 
-                if (email == "")
+                Regex regexEmail = new Regex(".[a-zA-Z@a-zA-Z.a-zA-Z]+");
+                if (!regexEmail.IsMatch(email))
                 {
-                    // TODO:
-                    // Add empty email
+                    emailErrorLabel.Visible = true;
+
                     return;
                 }
 
-                if (phone == "")
+                Regex regexPhone = new Regex(".[0-9]");
+                Regex regexPhone2 = new Regex(".{10,}");
+                if (!regexPhone.IsMatch(phone) || !regexPhone2.IsMatch(phone))
                 {
-                    // TODO:
-                    // Add empty phone
+                    phoneErrorLabel.Visible = true;
+
                     return;
                 }
 
@@ -90,20 +100,16 @@ namespace ComputerShop
 
                 if (registration != null)
                 {
-                    // TODO:
-                    // Add "wrong login" error message
                     return;
                 }
                 
                 if(acceptCheckBox.Checked == false)
                 {
-                    // TODO:
-                    // Add "not accepted checkbox" error message
                     return;
                 }
 
                 // Registration processing. Registration allowed
-                if(registration == null && acceptCheckBox.Checked == true)
+                if(registration == null && acceptCheckBox.Checked == true && allowReg == true)
                 {
                     var newUser = new User()
                     {

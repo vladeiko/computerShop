@@ -2,6 +2,8 @@
 using System.Linq;
 using System.Windows.Forms;
 using System.Data.Entity;
+using System.Drawing;
+using System.Drawing.Printing;
 
 namespace ComputerShop
 {
@@ -163,6 +165,34 @@ namespace ComputerShop
             openFileDialog1.ShowDialog();
 
             imagePictureBox.ImageLocation = openFileDialog1.FileName;
+        }
+
+        private void PrintImg(object sender, PrintPageEventArgs e)
+        {
+            Bitmap bm = new Bitmap(imagePictureBox.Width, imagePictureBox.Height);
+
+            imagePictureBox.DrawToBitmap(bm, new Rectangle(0, 0, imagePictureBox.Width, imagePictureBox.Height));
+
+            e.Graphics.DrawImage(bm, 0, 0);
+
+            bm.Dispose();
+
+        }
+
+        private void printImageButton_Click(object sender, EventArgs e)
+        {
+            PrintDialog pd = new PrintDialog();
+
+            PrintDocument doc = new PrintDocument();
+
+            doc.PrintPage += PrintImg;
+
+            pd.Document = doc;
+
+            if (pd.ShowDialog() == DialogResult.OK)
+            {
+                doc.Print();
+            }
         }
     }
 }

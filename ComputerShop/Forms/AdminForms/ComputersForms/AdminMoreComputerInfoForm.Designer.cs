@@ -56,6 +56,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.ramSizeTextBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.printImageButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.priceUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagePictureBox)).BeginInit();
             this.SuspendLayout();
@@ -325,11 +326,23 @@
             this.label10.TabIndex = 92;
             this.label10.Text = "Размер (ГБ):";
             // 
+            // printImageButton
+            // 
+            this.printImageButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.printImageButton.Location = new System.Drawing.Point(156, 337);
+            this.printImageButton.Name = "printImageButton";
+            this.printImageButton.Size = new System.Drawing.Size(106, 30);
+            this.printImageButton.TabIndex = 94;
+            this.printImageButton.Text = "Печать";
+            this.printImageButton.UseVisualStyleBackColor = true;
+            this.printImageButton.Click += new System.EventHandler(this.printImageButton_Click);
+            // 
             // AdminMoreComputerInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.printImageButton);
             this.Controls.Add(this.ramSizeTextBox);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.videomemoryTextBox);
@@ -394,5 +407,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox ramSizeTextBox;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button printImageButton;
     }
 }
