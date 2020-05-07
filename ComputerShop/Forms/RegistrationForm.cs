@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Linq;
+using System.Threading;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace ComputerShop
 {
@@ -30,50 +32,58 @@ namespace ComputerShop
                 string imgPath = avatarPictureBox.ImageLocation;
 
                 if (avatarPictureBox.ImageLocation == "")
-                    imgPath = "D:\\Univer\\4sem\\practice\\computerShop\\ComputerShop\\img\\noAvatar.png"; 
+                {
+                    imgPath = "D:\\Univer\\4sem\\practice\\computerShop\\ComputerShop\\img\\noAvatar.png";
+                }
 
                 // Error processing. Incorrectly entered data
                 if (login == "")
-                    {
-                        // TODO:
-                        // Add empty login
-                        return;
-                    }
+                {
+                    LoginTextBox.ForeColor = System.Drawing.Color.Red;
+                    LoginTextBox.Text = "Неправильно введён логин";
 
-                    if (firstName == "")
-                    {
-                        // TODO:
-                        // Add empty firstName
-                        return;
-                    }
+                    Thread.Sleep(20);
 
-                    if (secondName == "")
-                    {
-                        // TODO:
-                        // Add empty secondName
-                        return;
-                    }
+                    LoginTextBox.ForeColor = System.Drawing.Color.Black;
+                    LoginTextBox.Text = "";
 
-                    if (passWord == "")
-                    {
-                        // TODO:
-                        // Add empty passWord
-                        return;
-                    }
+                    return;
+                }
 
-                    if (email == "")
-                    {
-                        // TODO:
-                        // Add empty email
-                        return;
-                    }
+                if (firstName == "")
+                {
+                    // TODO:
+                    // Add empty firstName
+                    return;
+                }
 
-                    if (phone == "")
-                    {
-                        // TODO:
-                        // Add empty phone
-                        return;
-                    }
+                if (secondName == "")
+                {
+                    // TODO:
+                    // Add empty secondName
+                    return;
+                }
+
+                if (passWord == "")
+                {
+                    // TODO:
+                    // Add empty passWord
+                    return;
+                }
+
+                if (email == "")
+                {
+                    // TODO:
+                    // Add empty email
+                    return;
+                }
+
+                if (phone == "")
+                {
+                    // TODO:
+                    // Add empty phone
+                    return;
+                }
 
                 // Error processing. Is there such a user?
                 User registration = db.Users.SingleOrDefault(u => u.Login == login);

@@ -49,5 +49,11 @@ namespace ComputerShop
                 
             }
         }
+
+        private void buyButton_Click(object sender, System.EventArgs e)
+        {
+            UserBuyForm form = new UserBuyForm();
+            form.ShowDialog();
+        }
     }
 }

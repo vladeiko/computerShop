@@ -52,6 +52,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.ramSizeTextBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.buyButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.imagePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -248,11 +249,23 @@
             this.label10.TabIndex = 88;
             this.label10.Text = "Размер (ГБ):";
             // 
+            // buyButton
+            // 
+            this.buyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buyButton.Location = new System.Drawing.Point(549, 389);
+            this.buyButton.Name = "buyButton";
+            this.buyButton.Size = new System.Drawing.Size(92, 29);
+            this.buyButton.TabIndex = 90;
+            this.buyButton.Text = "КУПИТЬ";
+            this.buyButton.UseVisualStyleBackColor = true;
+            this.buyButton.Click += new System.EventHandler(this.buyButton_Click);
+            // 
             // UserMoreCompInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buyButton);
             this.Controls.Add(this.ramSizeTextBox);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.videomemoryTextBox);
@@ -307,5 +320,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox ramSizeTextBox;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button buyButton;
     }
 }

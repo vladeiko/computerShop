@@ -42,17 +42,18 @@
             this.label5 = new System.Windows.Forms.Label();
             this.EmailTextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.PhoneTextBox = new System.Windows.Forms.TextBox();
             this.goBackButton = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.avatarPictureBox = new System.Windows.Forms.PictureBox();
             this.addPictureButton = new System.Windows.Forms.Button();
+            this.PhoneTextBox = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.avatarPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // LoginTextBox
             // 
+            this.LoginTextBox.BackColor = System.Drawing.SystemColors.Window;
             this.LoginTextBox.Location = new System.Drawing.Point(97, 100);
             this.LoginTextBox.Name = "LoginTextBox";
             this.LoginTextBox.Size = new System.Drawing.Size(226, 20);
@@ -169,13 +170,6 @@
             this.label6.TabIndex = 13;
             this.label6.Text = "Телефон";
             // 
-            // PhoneTextBox
-            // 
-            this.PhoneTextBox.Location = new System.Drawing.Point(97, 285);
-            this.PhoneTextBox.Name = "PhoneTextBox";
-            this.PhoneTextBox.Size = new System.Drawing.Size(226, 20);
-            this.PhoneTextBox.TabIndex = 12;
-            // 
             // goBackButton
             // 
             this.goBackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -213,16 +207,24 @@
             this.addPictureButton.UseVisualStyleBackColor = true;
             this.addPictureButton.Click += new System.EventHandler(this.addPictureButton_Click);
             // 
+            // PhoneTextBox
+            // 
+            this.PhoneTextBox.Location = new System.Drawing.Point(97, 285);
+            this.PhoneTextBox.Mask = "8-(999)-000-000";
+            this.PhoneTextBox.Name = "PhoneTextBox";
+            this.PhoneTextBox.Size = new System.Drawing.Size(226, 20);
+            this.PhoneTextBox.TabIndex = 17;
+            // 
             // RegistrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(644, 421);
+            this.Controls.Add(this.PhoneTextBox);
             this.Controls.Add(this.addPictureButton);
             this.Controls.Add(this.avatarPictureBox);
             this.Controls.Add(this.goBackButton);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.PhoneTextBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.EmailTextBox);
             this.Controls.Add(this.acceptCheckBox);
@@ -260,11 +262,11 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox EmailTextBox;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox PhoneTextBox;
         private System.Windows.Forms.Button goBackButton;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.PictureBox avatarPictureBox;
         private System.Windows.Forms.Button addPictureButton;
+        private System.Windows.Forms.MaskedTextBox PhoneTextBox;
     }
 }

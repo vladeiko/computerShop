@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace ComputerShop
@@ -18,7 +19,15 @@ namespace ComputerShop
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            using(MyDbContext db = new MyDbContext())
+            progressBar1.Visible = true;
+
+            for (int i = 0; i < 100; i++)
+            {
+                progressBar1.Value++;
+                Thread.Sleep(10);
+            }
+
+            using (MyDbContext db = new MyDbContext())
             {
                 string login = LoginTextBox.Text;
                 string password = PasswordTextBox.Text;
@@ -59,7 +68,7 @@ namespace ComputerShop
 
         private void GuestButton_Click(object sender, EventArgs e)
         {
-            GuestForm1 form = new GuestForm1();
+            GuestStartForm form = new GuestStartForm();
             form.Show();
             Hide();
         }
@@ -69,6 +78,18 @@ namespace ComputerShop
             StartForm form = new StartForm();
             form.Show();
             Hide();
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked)
+                PasswordTextBox.UseSystemPasswordChar = false;
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton2.Checked)
+                PasswordTextBox.UseSystemPasswordChar = true;
         }
     }
 }

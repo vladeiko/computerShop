@@ -37,7 +37,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.secondNameTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.phoneTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.emailTextBox = new System.Windows.Forms.TextBox();
             this.editButton = new System.Windows.Forms.Button();
@@ -48,6 +47,7 @@
             this.addPictureButton = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.phoneTextBox = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.avatarPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,14 +119,6 @@
             this.label4.Size = new System.Drawing.Size(52, 13);
             this.label4.TabIndex = 8;
             this.label4.Text = "Телефон";
-            // 
-            // phoneTextBox
-            // 
-            this.phoneTextBox.Location = new System.Drawing.Point(369, 216);
-            this.phoneTextBox.Name = "phoneTextBox";
-            this.phoneTextBox.ReadOnly = true;
-            this.phoneTextBox.Size = new System.Drawing.Size(177, 20);
-            this.phoneTextBox.TabIndex = 7;
             // 
             // label5
             // 
@@ -219,11 +211,21 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // phoneTextBox
+            // 
+            this.phoneTextBox.Location = new System.Drawing.Point(369, 216);
+            this.phoneTextBox.Mask = "8-(999)-000-000";
+            this.phoneTextBox.Name = "phoneTextBox";
+            this.phoneTextBox.ReadOnly = true;
+            this.phoneTextBox.Size = new System.Drawing.Size(177, 20);
+            this.phoneTextBox.TabIndex = 51;
+            // 
             // AdminMoreUserInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(624, 401);
+            this.Controls.Add(this.phoneTextBox);
             this.Controls.Add(this.addPictureButton);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.statusComboBox);
@@ -233,7 +235,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.emailTextBox);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.phoneTextBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.secondNameTextBox);
             this.Controls.Add(this.label2);
@@ -260,7 +261,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox secondNameTextBox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox phoneTextBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox emailTextBox;
         private System.Windows.Forms.Button editButton;
@@ -271,5 +271,6 @@
         private System.Windows.Forms.Button addPictureButton;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.MaskedTextBox phoneTextBox;
     }
 }

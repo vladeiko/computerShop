@@ -14,7 +14,6 @@ D:\Univer\4sem\practice\ComputerShop\ComputerShop\bin\Debug\EntityFramework.SqlS
 D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.csproj.CopyComplete
 D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.Migrations.InitialCreate.resources
 D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.Migrations.newColumn.resources
-D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.GuestForm1.resources
 D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.RegistrationForm.resources
 D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.Migrations.emailAndPhoneStrings.resources
 D:\Univer\4sem\practice\computerShop\ComputerShop\obj\Debug\ComputerShop.AdminStartForm.resources
@@ -46,3 +45,6 @@ D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.AdminAd
 D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.AdminMoreComputerInfoForm.resources
 D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.UserStartForm.resources
 D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.UserMoreCompInfoForm.resources
+D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.UserShowAccountForm.resources
+D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.GuestStartForm.resources
+D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.UserBuyForm.resources

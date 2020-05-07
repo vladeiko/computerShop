@@ -9,6 +9,8 @@ namespace ComputerShop
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
+
+            toDayTextBox.Text = dateTimePicker1.Value.ToString();
         }
 
         private void AdminStartForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -56,6 +58,25 @@ namespace ComputerShop
             AdminShowComputersForm form = new AdminShowComputersForm();
             form.Show();
             Hide();
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            dateTimePicker1.Visible = true;
+            monthCalendar1.Visible = true;
+            button1.Visible = true;
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            dateTimePicker1.Visible = false;
+            monthCalendar1.Visible = false;
+            button1.Visible = false;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            toDayTextBox.Text = dateTimePicker1.Value.ToString();
         }
     }
 }

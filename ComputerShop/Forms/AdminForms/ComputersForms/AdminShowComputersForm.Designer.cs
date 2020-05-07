@@ -37,6 +37,13 @@
             this.showMoreButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
             this.addButton = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.processorComboBox = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.videocardComboBox = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.ramComboBox = new System.Windows.Forms.ComboBox();
+            this.filterButton = new System.Windows.Forms.Button();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.manufacturerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.modelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,6 +56,9 @@
             this.rAMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.computerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.procCheckBox = new System.Windows.Forms.CheckBox();
+            this.videoCheckBox = new System.Windows.Forms.CheckBox();
+            this.ramCheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.computersDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.computerBindingSource)).BeginInit();
@@ -82,7 +92,7 @@
             this.rAMDataGridViewTextBoxColumn,
             this.priceDataGridViewTextBoxColumn});
             this.computersDataGrid.DataSource = this.computerBindingSource;
-            this.computersDataGrid.Location = new System.Drawing.Point(12, 106);
+            this.computersDataGrid.Location = new System.Drawing.Point(12, 182);
             this.computersDataGrid.Name = "computersDataGrid";
             this.computersDataGrid.ReadOnly = true;
             this.computersDataGrid.RowHeadersVisible = false;
@@ -102,7 +112,7 @@
             // reloadButton
             // 
             this.reloadButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.reloadButton.Location = new System.Drawing.Point(311, 412);
+            this.reloadButton.Location = new System.Drawing.Point(311, 488);
             this.reloadButton.Name = "reloadButton";
             this.reloadButton.Size = new System.Drawing.Size(92, 29);
             this.reloadButton.TabIndex = 28;
@@ -113,7 +123,7 @@
             // showMoreButton
             // 
             this.showMoreButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.showMoreButton.Location = new System.Drawing.Point(12, 412);
+            this.showMoreButton.Location = new System.Drawing.Point(12, 488);
             this.showMoreButton.Name = "showMoreButton";
             this.showMoreButton.Size = new System.Drawing.Size(92, 29);
             this.showMoreButton.TabIndex = 27;
@@ -124,7 +134,7 @@
             // deleteButton
             // 
             this.deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.deleteButton.Location = new System.Drawing.Point(212, 412);
+            this.deleteButton.Location = new System.Drawing.Point(212, 488);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(92, 29);
             this.deleteButton.TabIndex = 30;
@@ -135,13 +145,83 @@
             // addButton
             // 
             this.addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addButton.Location = new System.Drawing.Point(112, 412);
+            this.addButton.Location = new System.Drawing.Point(112, 488);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(92, 29);
             this.addButton.TabIndex = 29;
             this.addButton.Text = "Добавить";
             this.addButton.UseVisualStyleBackColor = true;
             this.addButton.Click += new System.EventHandler(this.addButton_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(12, 142);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(83, 16);
+            this.label3.TabIndex = 56;
+            this.label3.Text = "Процессор:";
+            // 
+            // processorComboBox
+            // 
+            this.processorComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.processorComboBox.DropDownWidth = 120;
+            this.processorComboBox.Location = new System.Drawing.Point(101, 142);
+            this.processorComboBox.Name = "processorComboBox";
+            this.processorComboBox.Size = new System.Drawing.Size(100, 21);
+            this.processorComboBox.TabIndex = 55;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(215, 142);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(90, 16);
+            this.label4.TabIndex = 59;
+            this.label4.Text = "Видеокарта:";
+            // 
+            // videocardComboBox
+            // 
+            this.videocardComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.videocardComboBox.DropDownWidth = 400;
+            this.videocardComboBox.FormattingEnabled = true;
+            this.videocardComboBox.Location = new System.Drawing.Point(311, 142);
+            this.videocardComboBox.Name = "videocardComboBox";
+            this.videocardComboBox.Size = new System.Drawing.Size(100, 21);
+            this.videocardComboBox.TabIndex = 58;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(429, 144);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(39, 16);
+            this.label5.TabIndex = 61;
+            this.label5.Text = "ОЗУ:";
+            // 
+            // ramComboBox
+            // 
+            this.ramComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ramComboBox.DropDownWidth = 250;
+            this.ramComboBox.FormattingEnabled = true;
+            this.ramComboBox.Location = new System.Drawing.Point(474, 142);
+            this.ramComboBox.Name = "ramComboBox";
+            this.ramComboBox.Size = new System.Drawing.Size(100, 21);
+            this.ramComboBox.TabIndex = 60;
+            // 
+            // filterButton
+            // 
+            this.filterButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.filterButton.Location = new System.Drawing.Point(598, 138);
+            this.filterButton.Name = "filterButton";
+            this.filterButton.Size = new System.Drawing.Size(92, 29);
+            this.filterButton.TabIndex = 62;
+            this.filterButton.Text = "Показать";
+            this.filterButton.UseVisualStyleBackColor = true;
+            this.filterButton.Click += new System.EventHandler(this.filterButton_Click);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -232,11 +312,51 @@
             // 
             this.computerBindingSource.DataSource = typeof(ComputerShop.Computer);
             // 
+            // procCheckBox
+            // 
+            this.procCheckBox.AutoSize = true;
+            this.procCheckBox.Location = new System.Drawing.Point(112, 119);
+            this.procCheckBox.Name = "procCheckBox";
+            this.procCheckBox.Size = new System.Drawing.Size(81, 17);
+            this.procCheckBox.TabIndex = 63;
+            this.procCheckBox.Text = "Учитывать";
+            this.procCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // videoCheckBox
+            // 
+            this.videoCheckBox.AutoSize = true;
+            this.videoCheckBox.Location = new System.Drawing.Point(322, 119);
+            this.videoCheckBox.Name = "videoCheckBox";
+            this.videoCheckBox.Size = new System.Drawing.Size(81, 17);
+            this.videoCheckBox.TabIndex = 64;
+            this.videoCheckBox.Text = "Учитывать";
+            this.videoCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // ramCheckBox
+            // 
+            this.ramCheckBox.AutoSize = true;
+            this.ramCheckBox.Location = new System.Drawing.Point(483, 119);
+            this.ramCheckBox.Name = "ramCheckBox";
+            this.ramCheckBox.Size = new System.Drawing.Size(81, 17);
+            this.ramCheckBox.TabIndex = 65;
+            this.ramCheckBox.Text = "Учитывать";
+            this.ramCheckBox.UseVisualStyleBackColor = true;
+            // 
             // AdminShowComputersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(854, 511);
+            this.ClientSize = new System.Drawing.Size(854, 525);
+            this.Controls.Add(this.ramCheckBox);
+            this.Controls.Add(this.videoCheckBox);
+            this.Controls.Add(this.procCheckBox);
+            this.Controls.Add(this.filterButton);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.ramComboBox);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.videocardComboBox);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.processorComboBox);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.reloadButton);
@@ -252,6 +372,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.computerBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -276,5 +397,15 @@
         private System.Windows.Forms.Button showMoreButton;
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.Button addButton;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox processorComboBox;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox videocardComboBox;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox ramComboBox;
+        private System.Windows.Forms.Button filterButton;
+        private System.Windows.Forms.CheckBox procCheckBox;
+        private System.Windows.Forms.CheckBox videoCheckBox;
+        private System.Windows.Forms.CheckBox ramCheckBox;
     }
 }

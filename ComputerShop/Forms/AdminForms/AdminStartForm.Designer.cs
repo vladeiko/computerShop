@@ -36,13 +36,21 @@
             this.showVideocardsButton = new System.Windows.Forms.Button();
             this.showRAMsButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.toDayTextBox = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // showUsersButton
             // 
             this.showUsersButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.showUsersButton.Location = new System.Drawing.Point(605, 45);
+            this.showUsersButton.Location = new System.Drawing.Point(553, 48);
             this.showUsersButton.Name = "showUsersButton";
             this.showUsersButton.Size = new System.Drawing.Size(148, 63);
             this.showUsersButton.TabIndex = 0;
@@ -64,7 +72,7 @@
             // showComputersButton
             // 
             this.showComputersButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.showComputersButton.Location = new System.Drawing.Point(177, 45);
+            this.showComputersButton.Location = new System.Drawing.Point(125, 48);
             this.showComputersButton.Name = "showComputersButton";
             this.showComputersButton.Size = new System.Drawing.Size(148, 63);
             this.showComputersButton.TabIndex = 2;
@@ -75,7 +83,7 @@
             // showProcessorsButton
             // 
             this.showProcessorsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.showProcessorsButton.Location = new System.Drawing.Point(177, 156);
+            this.showProcessorsButton.Location = new System.Drawing.Point(125, 159);
             this.showProcessorsButton.Name = "showProcessorsButton";
             this.showProcessorsButton.Size = new System.Drawing.Size(148, 63);
             this.showProcessorsButton.TabIndex = 3;
@@ -86,7 +94,7 @@
             // showVideocardsButton
             // 
             this.showVideocardsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.showVideocardsButton.Location = new System.Drawing.Point(177, 267);
+            this.showVideocardsButton.Location = new System.Drawing.Point(125, 270);
             this.showVideocardsButton.Name = "showVideocardsButton";
             this.showVideocardsButton.Size = new System.Drawing.Size(148, 63);
             this.showVideocardsButton.TabIndex = 4;
@@ -97,7 +105,7 @@
             // showRAMsButton
             // 
             this.showRAMsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.showRAMsButton.Location = new System.Drawing.Point(177, 373);
+            this.showRAMsButton.Location = new System.Drawing.Point(125, 376);
             this.showRAMsButton.Name = "showRAMsButton";
             this.showRAMsButton.Size = new System.Drawing.Size(148, 63);
             this.showRAMsButton.TabIndex = 5;
@@ -108,18 +116,100 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(361, 45);
+            this.pictureBox1.Location = new System.Drawing.Point(309, 48);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(214, 199);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 49;
             this.pictureBox1.TabStop = false;
             // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Location = new System.Drawing.Point(555, 229);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 50;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(565, 201);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(144, 20);
+            this.dateTimePicker1.TabIndex = 51;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
+            this.radioButton1.Location = new System.Drawing.Point(560, 178);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(74, 17);
+            this.radioButton1.TabIndex = 52;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Показать";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(650, 178);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(63, 17);
+            this.radioButton2.TabIndex = 53;
+            this.radioButton2.Text = "Скрыть";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(584, 159);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 16);
+            this.label1.TabIndex = 54;
+            this.label1.Text = "КАЛЕНДАРЬ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(568, 401);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.TabIndex = 55;
+            this.label2.Text = "Вывод:";
+            // 
+            // toDayTextBox
+            // 
+            this.toDayTextBox.Location = new System.Drawing.Point(617, 398);
+            this.toDayTextBox.Name = "toDayTextBox";
+            this.toDayTextBox.ReadOnly = true;
+            this.toDayTextBox.Size = new System.Drawing.Size(60, 20);
+            this.toDayTextBox.TabIndex = 56;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(715, 200);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 57;
+            this.button1.Text = "НАЖМИ";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // AdminStartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(854, 451);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.toDayTextBox);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.showRAMsButton);
             this.Controls.Add(this.showVideocardsButton);
@@ -133,6 +223,7 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdminStartForm_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -145,5 +236,13 @@
         private System.Windows.Forms.Button showVideocardsButton;
         private System.Windows.Forms.Button showRAMsButton;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox toDayTextBox;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -187,11 +187,11 @@
     <Compile Include="Forms\AdminForms\VideocardsForms\AdminShowVideocardsForm.Designer.cs">
       <DependentUpon>AdminShowVideocardsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\GuestForms\GuestForm1.cs">
+    <Compile Include="Forms\GuestForms\GuestStartForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\GuestForms\GuestForm1.Designer.cs">
-      <DependentUpon>GuestForm1.cs</DependentUpon>
+    <Compile Include="Forms\GuestForms\GuestStartForm.Designer.cs">
+      <DependentUpon>GuestStartForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
@@ -199,11 +199,23 @@
     <Compile Include="Forms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\UserForms\UserBuyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserForms\UserBuyForm.Designer.cs">
+      <DependentUpon>UserBuyForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\UserForms\UserMoreCompInfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\UserForms\UserMoreCompInfoForm.Designer.cs">
       <DependentUpon>UserMoreCompInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserForms\UserShowAccountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserForms\UserShowAccountForm.Designer.cs">
+      <DependentUpon>UserShowAccountForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202004291650118_InitialCreate.cs" />
     <Compile Include="Migrations\202004291650118_InitialCreate.designer.cs">
@@ -324,14 +336,20 @@
     <EmbeddedResource Include="Forms\AdminForms\VideocardsForms\AdminShowVideocardsForm.resx">
       <DependentUpon>AdminShowVideocardsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\GuestForms\GuestForm1.resx">
-      <DependentUpon>GuestForm1.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\GuestForms\GuestStartForm.resx">
+      <DependentUpon>GuestStartForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserForms\UserBuyForm.resx">
+      <DependentUpon>UserBuyForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\UserForms\UserMoreCompInfoForm.resx">
       <DependentUpon>UserMoreCompInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserForms\UserShowAccountForm.resx">
+      <DependentUpon>UserShowAccountForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004291650118_InitialCreate.resx">
       <DependentUpon>202004291650118_InitialCreate.cs</DependentUpon>

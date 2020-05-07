@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Data.Entity;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace ComputerShop
 {
@@ -19,6 +21,12 @@ namespace ComputerShop
                 db.RAMs.Load();
 
                 computersDataGrid.DataSource = db.Computers.Local.ToBindingList();
+
+                processorComboBox.DataSource = db.Processors.ToList();
+
+                videocardComboBox.DataSource = db.Videocards.ToList();
+
+                ramComboBox.DataSource = db.RAMs.ToList();
             }
 
             return;
@@ -67,6 +75,43 @@ namespace ComputerShop
                 computersDataGrid.ClearSelection();
 
                 computersDataGrid.DataSource = db.Computers.Local.ToBindingList();
+            }
+        }
+
+        private void accountButton_Click(object sender, EventArgs e)
+        {
+            UserShowAccountForm form = new UserShowAccountForm();
+            form.ShowDialog();
+        }
+
+        private void filterButton_Click(object sender, EventArgs e)
+        {
+            computersDataGrid.SelectAll();
+            computersDataGrid.ClearSelection();
+
+            string selectedProc = processorComboBox.Text;
+            string selectedVideo = videocardComboBox.Text;
+            string selectedRAM = ramComboBox.Text;
+
+            using (var db = new MyDbContext())
+            {
+                db.Computers.Load();
+                db.Processors.Load();
+                db.Videocards.Load();
+                db.RAMs.Load();
+
+                List<Computer> filtered = db.Computers.Local.ToList();
+
+                if (procCheckBox.Checked == true)
+                    filtered = db.Computers.Where(p => p.Processor.Name == selectedProc).ToList();
+
+                if (videoCheckBox.Checked == true)
+                    filtered = filtered.Where(v => v.Videocard.Name == selectedVideo).ToList();
+
+                if (ramCheckBox.Checked == true)
+                    filtered = filtered.Where(r => r.RAM.Name == selectedRAM).ToList();
+
+                computersDataGrid.DataSource = filtered;
             }
         }
     }
