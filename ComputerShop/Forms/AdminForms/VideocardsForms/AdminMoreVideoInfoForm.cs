@@ -55,6 +55,16 @@ namespace ComputerShop
                 string videoName = videoNameTextBox.Text;
                 string videomemory = videomemoryTextBox.Text;
 
+                // Eror processing. If string is not a num - return
+                try
+                {
+                    Convert.ToInt32(videomemory);
+                }
+                catch
+                {
+                    return;
+                }
+
                 Videocard editing = db.Videocards.SingleOrDefault(v => v.Id == videoId);
 
                 if (videoName == "")

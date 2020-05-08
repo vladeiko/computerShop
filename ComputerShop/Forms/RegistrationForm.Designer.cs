@@ -54,34 +54,36 @@
             this.passwordErrorLabel = new System.Windows.Forms.Label();
             this.emailErrorLabel = new System.Windows.Forms.Label();
             this.phoneErrorLabel = new System.Windows.Forms.Label();
+            this.rulesNotAcceptedLabel = new System.Windows.Forms.Label();
+            this.regErrorLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.avatarPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // LoginTextBox
             // 
             this.LoginTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.LoginTextBox.Location = new System.Drawing.Point(97, 100);
+            this.LoginTextBox.Location = new System.Drawing.Point(97, 61);
             this.LoginTextBox.Name = "LoginTextBox";
             this.LoginTextBox.Size = new System.Drawing.Size(226, 20);
             this.LoginTextBox.TabIndex = 0;
             // 
             // FirstNameTextBox
             // 
-            this.FirstNameTextBox.Location = new System.Drawing.Point(97, 135);
+            this.FirstNameTextBox.Location = new System.Drawing.Point(97, 112);
             this.FirstNameTextBox.Name = "FirstNameTextBox";
             this.FirstNameTextBox.Size = new System.Drawing.Size(226, 20);
             this.FirstNameTextBox.TabIndex = 1;
             // 
             // SecondNameTextBox
             // 
-            this.SecondNameTextBox.Location = new System.Drawing.Point(97, 171);
+            this.SecondNameTextBox.Location = new System.Drawing.Point(97, 166);
             this.SecondNameTextBox.Name = "SecondNameTextBox";
             this.SecondNameTextBox.Size = new System.Drawing.Size(226, 20);
             this.SecondNameTextBox.TabIndex = 2;
             // 
             // PassWordTextBox
             // 
-            this.PassWordTextBox.Location = new System.Drawing.Point(97, 209);
+            this.PassWordTextBox.Location = new System.Drawing.Point(97, 213);
             this.PassWordTextBox.Name = "PassWordTextBox";
             this.PassWordTextBox.Size = new System.Drawing.Size(226, 20);
             this.PassWordTextBox.TabIndex = 3;
@@ -90,7 +92,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(44, 101);
+            this.label1.Location = new System.Drawing.Point(44, 62);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 16);
             this.label1.TabIndex = 4;
@@ -100,7 +102,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(57, 136);
+            this.label2.Location = new System.Drawing.Point(57, 113);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 16);
             this.label2.TabIndex = 5;
@@ -110,7 +112,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(24, 172);
+            this.label3.Location = new System.Drawing.Point(24, 167);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 16);
             this.label3.TabIndex = 6;
@@ -120,7 +122,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(34, 210);
+            this.label4.Location = new System.Drawing.Point(34, 214);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 16);
             this.label4.TabIndex = 7;
@@ -129,7 +131,7 @@
             // bSignUp
             // 
             this.bSignUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bSignUp.Location = new System.Drawing.Point(144, 356);
+            this.bSignUp.Location = new System.Drawing.Point(144, 395);
             this.bSignUp.Margin = new System.Windows.Forms.Padding(2);
             this.bSignUp.Name = "bSignUp";
             this.bSignUp.Size = new System.Drawing.Size(100, 30);
@@ -142,7 +144,7 @@
             // 
             this.acceptCheckBox.AutoSize = true;
             this.acceptCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.acceptCheckBox.Location = new System.Drawing.Point(97, 320);
+            this.acceptCheckBox.Location = new System.Drawing.Point(97, 359);
             this.acceptCheckBox.Name = "acceptCheckBox";
             this.acceptCheckBox.Size = new System.Drawing.Size(226, 20);
             this.acceptCheckBox.TabIndex = 9;
@@ -153,7 +155,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(49, 250);
+            this.label5.Location = new System.Drawing.Point(49, 264);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 16);
             this.label5.TabIndex = 11;
@@ -161,7 +163,7 @@
             // 
             // EmailTextBox
             // 
-            this.EmailTextBox.Location = new System.Drawing.Point(97, 249);
+            this.EmailTextBox.Location = new System.Drawing.Point(97, 263);
             this.EmailTextBox.Name = "EmailTextBox";
             this.EmailTextBox.Size = new System.Drawing.Size(226, 20);
             this.EmailTextBox.TabIndex = 10;
@@ -170,7 +172,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(23, 286);
+            this.label6.Location = new System.Drawing.Point(23, 310);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 16);
             this.label6.TabIndex = 13;
@@ -194,9 +196,9 @@
             // avatarPictureBox
             // 
             this.avatarPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("avatarPictureBox.Image")));
-            this.avatarPictureBox.Location = new System.Drawing.Point(428, 70);
+            this.avatarPictureBox.Location = new System.Drawing.Point(343, 48);
             this.avatarPictureBox.Name = "avatarPictureBox";
-            this.avatarPictureBox.Size = new System.Drawing.Size(235, 235);
+            this.avatarPictureBox.Size = new System.Drawing.Size(330, 304);
             this.avatarPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.avatarPictureBox.TabIndex = 15;
             this.avatarPictureBox.TabStop = false;
@@ -204,7 +206,7 @@
             // addPictureButton
             // 
             this.addPictureButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addPictureButton.Location = new System.Drawing.Point(497, 329);
+            this.addPictureButton.Location = new System.Drawing.Point(452, 367);
             this.addPictureButton.Margin = new System.Windows.Forms.Padding(2);
             this.addPictureButton.Name = "addPictureButton";
             this.addPictureButton.Size = new System.Drawing.Size(104, 49);
@@ -215,7 +217,7 @@
             // 
             // PhoneTextBox
             // 
-            this.PhoneTextBox.Location = new System.Drawing.Point(97, 285);
+            this.PhoneTextBox.Location = new System.Drawing.Point(97, 309);
             this.PhoneTextBox.Mask = "8-(999)-000-00-00";
             this.PhoneTextBox.Name = "PhoneTextBox";
             this.PhoneTextBox.Size = new System.Drawing.Size(226, 20);
@@ -225,73 +227,98 @@
             // 
             this.loginErrorLabel.AutoSize = true;
             this.loginErrorLabel.ForeColor = System.Drawing.Color.Red;
-            this.loginErrorLabel.Location = new System.Drawing.Point(329, 103);
+            this.loginErrorLabel.Location = new System.Drawing.Point(94, 45);
             this.loginErrorLabel.Name = "loginErrorLabel";
-            this.loginErrorLabel.Size = new System.Drawing.Size(80, 13);
+            this.loginErrorLabel.Size = new System.Drawing.Size(201, 13);
             this.loginErrorLabel.TabIndex = 18;
-            this.loginErrorLabel.Text = "Ошибка ввода";
+            this.loginErrorLabel.Text = "Ошибка ввода (не короче 3 символов)";
             this.loginErrorLabel.Visible = false;
             // 
             // nameErrorLabel
             // 
             this.nameErrorLabel.AutoSize = true;
             this.nameErrorLabel.ForeColor = System.Drawing.Color.Red;
-            this.nameErrorLabel.Location = new System.Drawing.Point(329, 139);
+            this.nameErrorLabel.Location = new System.Drawing.Point(94, 96);
             this.nameErrorLabel.Name = "nameErrorLabel";
-            this.nameErrorLabel.Size = new System.Drawing.Size(80, 13);
+            this.nameErrorLabel.Size = new System.Drawing.Size(217, 13);
             this.nameErrorLabel.TabIndex = 19;
-            this.nameErrorLabel.Text = "Ошибка ввода";
+            this.nameErrorLabel.Text = "Ошибка ввода (только русские символы)";
             this.nameErrorLabel.Visible = false;
             // 
             // secnameErrorLabel
             // 
             this.secnameErrorLabel.AutoSize = true;
             this.secnameErrorLabel.ForeColor = System.Drawing.Color.Red;
-            this.secnameErrorLabel.Location = new System.Drawing.Point(329, 174);
+            this.secnameErrorLabel.Location = new System.Drawing.Point(94, 150);
             this.secnameErrorLabel.Name = "secnameErrorLabel";
-            this.secnameErrorLabel.Size = new System.Drawing.Size(80, 13);
+            this.secnameErrorLabel.Size = new System.Drawing.Size(217, 13);
             this.secnameErrorLabel.TabIndex = 20;
-            this.secnameErrorLabel.Text = "Ошибка ввода";
+            this.secnameErrorLabel.Text = "Ошибка ввода (тольок русские символы)";
             this.secnameErrorLabel.Visible = false;
             // 
             // passwordErrorLabel
             // 
             this.passwordErrorLabel.AutoSize = true;
             this.passwordErrorLabel.ForeColor = System.Drawing.Color.Red;
-            this.passwordErrorLabel.Location = new System.Drawing.Point(329, 212);
+            this.passwordErrorLabel.Location = new System.Drawing.Point(94, 197);
             this.passwordErrorLabel.Name = "passwordErrorLabel";
-            this.passwordErrorLabel.Size = new System.Drawing.Size(80, 13);
+            this.passwordErrorLabel.Size = new System.Drawing.Size(201, 13);
             this.passwordErrorLabel.TabIndex = 21;
-            this.passwordErrorLabel.Text = "Ошибка ввода";
+            this.passwordErrorLabel.Text = "Ошибка ввода (не короче 8 символов)";
             this.passwordErrorLabel.Visible = false;
             // 
             // emailErrorLabel
             // 
             this.emailErrorLabel.AutoSize = true;
             this.emailErrorLabel.ForeColor = System.Drawing.Color.Red;
-            this.emailErrorLabel.Location = new System.Drawing.Point(329, 252);
+            this.emailErrorLabel.Location = new System.Drawing.Point(94, 247);
             this.emailErrorLabel.Name = "emailErrorLabel";
-            this.emailErrorLabel.Size = new System.Drawing.Size(80, 13);
+            this.emailErrorLabel.Size = new System.Drawing.Size(164, 13);
             this.emailErrorLabel.TabIndex = 22;
-            this.emailErrorLabel.Text = "Ошибка ввода";
+            this.emailErrorLabel.Text = "Ошибка ввода (example@ex.ex)";
             this.emailErrorLabel.Visible = false;
             // 
             // phoneErrorLabel
             // 
             this.phoneErrorLabel.AutoSize = true;
             this.phoneErrorLabel.ForeColor = System.Drawing.Color.Red;
-            this.phoneErrorLabel.Location = new System.Drawing.Point(329, 289);
+            this.phoneErrorLabel.Location = new System.Drawing.Point(97, 293);
             this.phoneErrorLabel.Name = "phoneErrorLabel";
-            this.phoneErrorLabel.Size = new System.Drawing.Size(80, 13);
+            this.phoneErrorLabel.Size = new System.Drawing.Size(177, 13);
             this.phoneErrorLabel.TabIndex = 23;
-            this.phoneErrorLabel.Text = "Ошибка ввода";
+            this.phoneErrorLabel.Text = "Неправильный формат телефона";
             this.phoneErrorLabel.Visible = false;
+            // 
+            // rulesNotAcceptedLabel
+            // 
+            this.rulesNotAcceptedLabel.AutoSize = true;
+            this.rulesNotAcceptedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rulesNotAcceptedLabel.ForeColor = System.Drawing.Color.Red;
+            this.rulesNotAcceptedLabel.Location = new System.Drawing.Point(107, 340);
+            this.rulesNotAcceptedLabel.Name = "rulesNotAcceptedLabel";
+            this.rulesNotAcceptedLabel.Size = new System.Drawing.Size(216, 16);
+            this.rulesNotAcceptedLabel.TabIndex = 24;
+            this.rulesNotAcceptedLabel.Text = "Вы не согласились справилами!";
+            this.rulesNotAcceptedLabel.Visible = false;
+            // 
+            // regErrorLabel
+            // 
+            this.regErrorLabel.AutoSize = true;
+            this.regErrorLabel.ForeColor = System.Drawing.Color.Red;
+            this.regErrorLabel.Location = new System.Drawing.Point(103, 427);
+            this.regErrorLabel.Name = "regErrorLabel";
+            this.regErrorLabel.Size = new System.Drawing.Size(198, 13);
+            this.regErrorLabel.TabIndex = 25;
+            this.regErrorLabel.Text = "Пользователь с таким логином есть!";
+            this.regErrorLabel.Visible = false;
             // 
             // RegistrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(685, 421);
+            this.ClientSize = new System.Drawing.Size(685, 464);
+            this.Controls.Add(this.regErrorLabel);
+            this.Controls.Add(this.rulesNotAcceptedLabel);
             this.Controls.Add(this.phoneErrorLabel);
             this.Controls.Add(this.emailErrorLabel);
             this.Controls.Add(this.passwordErrorLabel);
@@ -352,5 +379,7 @@
         private System.Windows.Forms.Label passwordErrorLabel;
         private System.Windows.Forms.Label emailErrorLabel;
         private System.Windows.Forms.Label phoneErrorLabel;
+        private System.Windows.Forms.Label rulesNotAcceptedLabel;
+        private System.Windows.Forms.Label regErrorLabel;
     }
 }

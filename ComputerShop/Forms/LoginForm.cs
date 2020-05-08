@@ -19,6 +19,8 @@ namespace ComputerShop
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
+            authorisationErrorLabel.Visible = false
+                ;
             progressBar1.Visible = true;
 
             for (int i = 0; i < 100; i++)
@@ -32,14 +34,14 @@ namespace ComputerShop
                 string login = LoginTextBox.Text;
                 string password = PasswordTextBox.Text;
 
-                // Authorization procession. Is "login" registered?
+                // Authorization procession. Is user registered?
                 User authorising = db.Users.SingleOrDefault(u => u.Login == login);
 
-                // Error processing. Wrong password
+                // Error processing. Wrong password or login
                 if (authorising == null || !PasswordHasher.Verify(password, authorising.PassWord))
                 {
-                    // TODO:
-                    // Add error (wrong password or username)
+                    authorisationErrorLabel.Visible = true;
+
                     return;
                 }
 
@@ -53,6 +55,7 @@ namespace ComputerShop
                     Hide();
                 }
 
+                // Authorization processing
                 if (authorising.Status == "user")
                 {
                     CurrentUser.Set(authorising);

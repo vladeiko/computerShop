@@ -16,7 +16,17 @@ namespace ComputerShop
             using (var db = new MyDbContext())
             {
                 string ramName = ramNameTextBox.Text;
-                int size = Convert.ToInt32(sizeTextBox.Text);
+                int size;
+
+                // Error processing
+                try
+                {
+                    size = Convert.ToInt32(sizeTextBox.Text);
+                }
+                catch
+                {
+                    return;
+                }
 
                 if (ramName == "")
                 {

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ComputerShop
 {
+    // "Videocards" table class
     class Videocard
     {
         public int Id { get; set; }

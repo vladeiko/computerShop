@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Class for hashing passwords
+using System;
 using System.Security.Cryptography;
 using System.Text;
 

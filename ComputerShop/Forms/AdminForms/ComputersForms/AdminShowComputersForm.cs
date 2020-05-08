@@ -146,6 +146,7 @@ namespace ComputerShop
         }
 
 
+        // CSV-function
         private void ToCsV(DataGridView dGV, string filename)
         {
             string stOutput = "";
@@ -168,9 +169,9 @@ namespace ComputerShop
                 stOutput += stLine + "\r\n";
             }
 
-            Encoding utf16 = Encoding.GetEncoding(1254);
+            Encoding enc = Encoding.GetEncoding(0);
 
-            byte[] output = utf16.GetBytes(stOutput);
+            byte[] output = enc.GetBytes(stOutput);
 
             FileStream fs = new FileStream(filename, FileMode.Create);
 
@@ -181,7 +182,6 @@ namespace ComputerShop
             bw.Close();
             fs.Close();
         }
-
 
         private void importToCsvButton_Click(object sender, EventArgs e)
         {
@@ -207,7 +207,6 @@ namespace ComputerShop
 
             e.Graphics.DrawImage(bm, 0, 0);
             bm.Dispose();
-
         }
 
         private void printButton_Click(object sender, EventArgs e)

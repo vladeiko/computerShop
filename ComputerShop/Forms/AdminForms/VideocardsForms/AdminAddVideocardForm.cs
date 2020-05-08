@@ -18,6 +18,16 @@ namespace ComputerShop
                 string videocardName = videoNameTextBox.Text;
                 int videomemory = Convert.ToInt32(videomemoryTextBox.Text);
 
+                // Eror processing. If string is not a num - return
+                try
+                {
+                    Convert.ToInt32(videomemory);
+                }
+                catch
+                {
+                    return;
+                }
+
                 if (videocardName == "")
                 {
                     // TODO:

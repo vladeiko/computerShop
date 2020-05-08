@@ -27,6 +27,8 @@ namespace ComputerShop
             passwordErrorLabel.Visible = false;
             emailErrorLabel.Visible = false;
             phoneErrorLabel.Visible = false;
+            rulesNotAcceptedLabel.Visible = false;
+            regErrorLabel.Visible = false;
 
             using (var db = new MyDbContext())
             {
@@ -54,6 +56,7 @@ namespace ComputerShop
                     return;
                 }
 
+                // Error processing. Incorrectly entered data
                 Regex regexFN = new Regex(".[А-я]");
                 if (!regexFN.IsMatch(firstName))
                 {
@@ -62,6 +65,7 @@ namespace ComputerShop
                     return;
                 }
 
+                // Error processing. Incorrectly entered data
                 Regex regexSN = new Regex(".[А-я]");
                 if (!regexSN.IsMatch(secondName))
                 {
@@ -70,6 +74,7 @@ namespace ComputerShop
                     return;
                 }
 
+                // Error processing. Incorrectly entered data
                 Regex regexPassword = new Regex(".{10,}");
                 if (!regexPassword.IsMatch(passWord))
                 {
@@ -78,6 +83,7 @@ namespace ComputerShop
                     return;
                 }
 
+                // Error processing. Incorrectly entered data
                 Regex regexEmail = new Regex(".[a-zA-Z@a-zA-Z.a-zA-Z]+");
                 if (!regexEmail.IsMatch(email))
                 {
@@ -86,6 +92,7 @@ namespace ComputerShop
                     return;
                 }
 
+                // Error processing. Incorrectly entered data
                 Regex regexPhone = new Regex(".[0-9]");
                 Regex regexPhone2 = new Regex(".{10,}");
                 if (!regexPhone.IsMatch(phone) || !regexPhone2.IsMatch(phone))
@@ -100,17 +107,21 @@ namespace ComputerShop
 
                 if (registration != null)
                 {
+                    regErrorLabel.Visible = true;
                     return;
                 }
                 
+                // Error processing. Is rules accepted?
                 if(acceptCheckBox.Checked == false)
                 {
+                    rulesNotAcceptedLabel.Visible = true;
                     return;
                 }
 
                 // Registration processing. Registration allowed
                 if(registration == null && acceptCheckBox.Checked == true && allowReg == true)
                 {
+                    // Create new User var and add it to DataBase, then save DataBase
                     var newUser = new User()
                     {
                         Login = login,

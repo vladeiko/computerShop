@@ -51,17 +51,21 @@ namespace ComputerShop
             using (var db = new MyDbContext())
             {
                 string ramName = ramNameTextBox.Text;
-                string size = sizeTextBox.Text;
+                int size;
+
+                // Error processing
+                try
+                {
+                    size = Convert.ToInt32(sizeTextBox.Text);
+                }
+                catch
+                {
+                    return;
+                }
 
                 RAM editing = db.RAMs.SingleOrDefault(r => r.Id == ramId);
 
                 if (ramName == "")
-                {
-                    // TODO:
-                    // Add error (empty)
-                }
-
-                if (size == "")
                 {
                     // TODO:
                     // Add error (empty)

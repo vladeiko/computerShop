@@ -40,13 +40,14 @@
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.authorisationErrorLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // LoginButton
             // 
             this.LoginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LoginButton.Location = new System.Drawing.Point(225, 262);
+            this.LoginButton.Location = new System.Drawing.Point(225, 284);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(65, 30);
             this.LoginButton.TabIndex = 1;
@@ -56,7 +57,7 @@
             // 
             // PasswordTextBox
             // 
-            this.PasswordTextBox.Location = new System.Drawing.Point(184, 231);
+            this.PasswordTextBox.Location = new System.Drawing.Point(184, 253);
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.Size = new System.Drawing.Size(156, 20);
             this.PasswordTextBox.TabIndex = 2;
@@ -64,7 +65,7 @@
             // 
             // LoginTextBox
             // 
-            this.LoginTextBox.Location = new System.Drawing.Point(184, 195);
+            this.LoginTextBox.Location = new System.Drawing.Point(184, 217);
             this.LoginTextBox.Name = "LoginTextBox";
             this.LoginTextBox.Size = new System.Drawing.Size(156, 20);
             this.LoginTextBox.TabIndex = 3;
@@ -73,7 +74,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(131, 195);
+            this.label1.Location = new System.Drawing.Point(131, 217);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 16);
             this.label1.TabIndex = 4;
@@ -83,7 +84,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(121, 235);
+            this.label2.Location = new System.Drawing.Point(121, 257);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 16);
             this.label2.TabIndex = 5;
@@ -92,7 +93,7 @@
             // GuestButton
             // 
             this.GuestButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.GuestButton.Location = new System.Drawing.Point(225, 309);
+            this.GuestButton.Location = new System.Drawing.Point(225, 331);
             this.GuestButton.Name = "GuestButton";
             this.GuestButton.Size = new System.Drawing.Size(65, 30);
             this.GuestButton.TabIndex = 6;
@@ -124,7 +125,7 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(204, 374);
+            this.progressBar1.Location = new System.Drawing.Point(204, 396);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(100, 23);
             this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
@@ -134,7 +135,7 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(346, 232);
+            this.radioButton1.Location = new System.Drawing.Point(346, 254);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(74, 17);
             this.radioButton1.TabIndex = 10;
@@ -146,7 +147,7 @@
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.Checked = true;
-            this.radioButton2.Location = new System.Drawing.Point(416, 232);
+            this.radioButton2.Location = new System.Drawing.Point(416, 254);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(63, 17);
             this.radioButton2.TabIndex = 11;
@@ -155,11 +156,24 @@
             this.radioButton2.UseVisualStyleBackColor = true;
             this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
+            // authorisationErrorLabel
+            // 
+            this.authorisationErrorLabel.AutoSize = true;
+            this.authorisationErrorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.authorisationErrorLabel.ForeColor = System.Drawing.Color.Red;
+            this.authorisationErrorLabel.Location = new System.Drawing.Point(153, 189);
+            this.authorisationErrorLabel.Name = "authorisationErrorLabel";
+            this.authorisationErrorLabel.Size = new System.Drawing.Size(232, 16);
+            this.authorisationErrorLabel.TabIndex = 12;
+            this.authorisationErrorLabel.Text = "НЕВЕРНЫЙ ЛОГИН ИЛИ ПАРОЛЬ!";
+            this.authorisationErrorLabel.Visible = false;
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(534, 407);
+            this.ClientSize = new System.Drawing.Size(534, 433);
+            this.Controls.Add(this.authorisationErrorLabel);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.progressBar1);
@@ -193,5 +207,6 @@
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.Label authorisationErrorLabel;
     }
 }

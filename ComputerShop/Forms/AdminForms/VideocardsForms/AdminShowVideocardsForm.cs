@@ -11,6 +11,7 @@ namespace ComputerShop
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
 
+            // Load data from database to DataGriedView
             using(var db = new MyDbContext())
             {
                 db.Videocards.Load();
@@ -31,6 +32,7 @@ namespace ComputerShop
             this.Hide();
         }
 
+        // Reload data from database to DataGriedView
         private void reloadButton_Click(object sender, EventArgs e)
         {
             using(var db = new MyDbContext())

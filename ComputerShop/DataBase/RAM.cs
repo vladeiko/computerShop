@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ComputerShop
 {
+    // "RAMs" table class
     class RAM
     {
         public int Id { get; set; }

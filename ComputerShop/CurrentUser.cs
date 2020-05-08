@@ -1,4 +1,5 @@
-﻿namespace ComputerShop
+﻿// Singletone
+namespace ComputerShop
 {
     public static class CurrentUser
     {

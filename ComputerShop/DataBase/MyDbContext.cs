@@ -4,6 +4,7 @@ using System.Data.Entity;
 
 namespace ComputerShop
 {
+    // Database context to work with DataBase (Entity Framework)
     class MyDbContext : DbContext
     {
         public MyDbContext()

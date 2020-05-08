@@ -57,6 +57,26 @@ namespace ComputerShop
                 string numofcores = numOfCoresTextBox.Text;
                 string clockfrequency = clockFrequencyTextBox.Text;
 
+                // Error processing
+                try
+                {
+                    Convert.ToInt32(numofcores);
+                }
+                catch
+                {
+                    return;
+                }
+
+                // Error processing
+                try
+                {
+                    Convert.ToInt32(clockfrequency);
+                }
+                catch
+                {
+                    return;
+                }
+
                 Processor editing = db.Processors.SingleOrDefault(u => u.Id == cpuId);
 
                 if (procname == "")
