@@ -42,10 +42,8 @@ namespace ComputerShop
 
                 bool allowReg = true;
 
-                if (avatarPictureBox.ImageLocation == "")
-                {
+                if (avatarPictureBox.ImageLocation == null)
                     imgPath = "D:\\Univer\\4sem\\practice\\computerShop\\ComputerShop\\img\\noAvatar.png";
-                }
 
                 // Error processing. Incorrectly entered data
                 Regex regexLogin = new Regex(".{3,}");  
@@ -53,7 +51,7 @@ namespace ComputerShop
                 {
                     loginErrorLabel.Visible = true;
 
-                    return;
+                    allowReg = false;
                 }
 
                 // Error processing. Incorrectly entered data
@@ -62,7 +60,7 @@ namespace ComputerShop
                 {
                     nameErrorLabel.Visible = true;
 
-                    return;
+                    allowReg = false;
                 }
 
                 // Error processing. Incorrectly entered data
@@ -71,7 +69,7 @@ namespace ComputerShop
                 {
                     secnameErrorLabel.Visible = true;
 
-                    return;
+                    allowReg = false;
                 }
 
                 // Error processing. Incorrectly entered data
@@ -80,7 +78,7 @@ namespace ComputerShop
                 {
                     passwordErrorLabel.Visible = true;
 
-                    return;
+                    allowReg = false;
                 }
 
                 // Error processing. Incorrectly entered data
@@ -89,7 +87,7 @@ namespace ComputerShop
                 {
                     emailErrorLabel.Visible = true;
 
-                    return;
+                    allowReg = false;
                 }
 
                 // Error processing. Incorrectly entered data
@@ -99,7 +97,7 @@ namespace ComputerShop
                 {
                     phoneErrorLabel.Visible = true;
 
-                    return;
+                    allowReg = false;
                 }
 
                 // Error processing. Is there such a user?
@@ -108,15 +106,18 @@ namespace ComputerShop
                 if (registration != null)
                 {
                     regErrorLabel.Visible = true;
-                    return;
+                    allowReg = false;
                 }
                 
                 // Error processing. Is rules accepted?
                 if(acceptCheckBox.Checked == false)
                 {
                     rulesNotAcceptedLabel.Visible = true;
-                    return;
+                    allowReg = false;
                 }
+
+                if (allowReg == false)
+                    return;
 
                 // Registration processing. Registration allowed
                 if(registration == null && acceptCheckBox.Checked == true && allowReg == true)
