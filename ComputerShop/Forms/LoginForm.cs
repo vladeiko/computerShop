@@ -19,8 +19,10 @@ namespace ComputerShop
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            authorisationErrorLabel.Visible = false
-                ;
+            progressBar1.Visible = true;
+            progressBar1.Value = 0;
+
+            authorisationErrorLabel.Visible = false;
             progressBar1.Visible = true;
 
             for (int i = 0; i < 100; i++)
@@ -65,6 +67,8 @@ namespace ComputerShop
                     Hide();
                 }
             }
+
+            progressBar1.Visible = false;
 
             return;
         }

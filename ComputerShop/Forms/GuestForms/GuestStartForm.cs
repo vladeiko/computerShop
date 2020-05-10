@@ -43,7 +43,7 @@ namespace ComputerShop
             try
             {
                 id = Convert.ToInt32(computersDataGrid.CurrentRow.Cells[0].Value.ToString());
-                UserMoreCompInfoForm form = new UserMoreCompInfoForm(id);
+                GuestMoreInfoForm form = new GuestMoreInfoForm(id);
                 form.ShowDialog();
             }
             catch

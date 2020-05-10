@@ -48,3 +48,4 @@ D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.UserMor
 D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.UserShowAccountForm.resources
 D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.GuestStartForm.resources
 D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.UserBuyForm.resources
+D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.GuestMoreInfoForm.resources
