@@ -49,3 +49,4 @@ D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.UserSho
 D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.GuestStartForm.resources
 D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.UserBuyForm.resources
 D:\Univer\4sem\practice\ComputerShop\ComputerShop\obj\Debug\ComputerShop.GuestMoreInfoForm.resources
+D:\Univer\4sem\practice\computerShop\ComputerShop\obj\Debug\ComputerShop.csproj.CoreCompileInputs.cache

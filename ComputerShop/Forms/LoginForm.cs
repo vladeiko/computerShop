@@ -44,6 +44,8 @@ namespace ComputerShop
                 {
                     authorisationErrorLabel.Visible = true;
 
+                    progressBar1.Visible = false;
+
                     return;
                 }
 
@@ -54,6 +56,9 @@ namespace ComputerShop
 
                     AdminStartForm form = new AdminStartForm();
                     form.Show();
+
+                    progressBar1.Visible = false;
+
                     Hide();
                 }
 
@@ -64,11 +69,12 @@ namespace ComputerShop
 
                     UserStartForm form = new UserStartForm();
                     form.Show();
+
+                    progressBar1.Visible = false;
+
                     Hide();
                 }
             }
-
-            progressBar1.Visible = false;
 
             return;
         }
